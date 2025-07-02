@@ -1,0 +1,17 @@
+{
+	"version": 2,
+	"processes": [
+		{
+			"name": "capsule_aind_vr_foraging_primary_qc_1",
+			"capsule": {
+				"id": "6e6b5a5d-2f83-48db-a10d-b7a5eb42e1fc",
+				"name": "aind-vr-foraging-primary-qc",
+				"slug": "2349123"
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			}
+		}
+	]
+}

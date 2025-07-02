@@ -1,0 +1,30 @@
+{
+	"edges": [],
+	"nodes": [
+		{
+			"data": {
+				"capsule_id": "6e6b5a5d-2f83-48db-a10d-b7a5eb42e1fc"
+			},
+			"id": "capsule_aind_vr_foraging_primary_qc_1",
+			"position": {
+				"x": 825,
+				"y": 285
+			},
+			"type": "capsule"
+		},
+		{
+			"id": "results",
+			"position": {
+				"x": 945,
+				"y": 685
+			},
+			"type": "results"
+		}
+	],
+	"timestamp": 1751483204867,
+	"viewport": {
+		"x": 0,
+		"y": 0,
+		"zoom": 0.75
+	}
+}
