@@ -1,5 +1,33 @@
 {
-	"edges": [],
+	"edges": [
+		{
+			"id": "xy-edge__a8713a36-33f2-4409-802c-268d83e37992-capsule_vr_foraging_primary_data_nwb_packaging_2",
+			"selected": false,
+			"source": "a8713a36-33f2-4409-802c-268d83e37992",
+			"target": "capsule_vr_foraging_primary_data_nwb_packaging_2"
+		},
+		{
+			"id": "xy-edge__a8713a36-33f2-4409-802c-268d83e37992-capsule_aind_vr_foraging_primary_qc_1",
+			"selected": false,
+			"source": "a8713a36-33f2-4409-802c-268d83e37992",
+			"target": "capsule_aind_vr_foraging_primary_qc_1"
+		},
+		{
+			"id": "xy-edge__capsule_aind_vr_foraging_primary_qc_1-results",
+			"source": "capsule_aind_vr_foraging_primary_qc_1",
+			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_vr_foraging_primary_data_nwb_packaging_2-capsule_aind_vr_foraging_processing_nwb_packaging_3",
+			"source": "capsule_vr_foraging_primary_data_nwb_packaging_2",
+			"target": "capsule_aind_vr_foraging_processing_nwb_packaging_3"
+		},
+		{
+			"id": "xy-edge__capsule_aind_vr_foraging_processing_nwb_packaging_3-results",
+			"source": "capsule_aind_vr_foraging_processing_nwb_packaging_3",
+			"target": "results"
+		}
+	],
 	"nodes": [
 		{
 			"data": {
@@ -7,24 +35,58 @@
 			},
 			"id": "capsule_aind_vr_foraging_primary_qc_1",
 			"position": {
-				"x": 825,
-				"y": 285
+				"x": 1230.3333333333333,
+				"y": 477.00000000000006
 			},
+			"selected": false,
 			"type": "capsule"
 		},
 		{
 			"id": "results",
 			"position": {
-				"x": 945,
-				"y": 685
+				"x": 939.6666666666667,
+				"y": 898.3333333333334
 			},
+			"selected": false,
 			"type": "results"
+		},
+		{
+			"data": {
+				"capsule_id": "51b7989c-8f37-4546-b936-a15e48ea8425"
+			},
+			"id": "capsule_vr_foraging_primary_data_nwb_packaging_2",
+			"position": {
+				"x": 344.66666666666663,
+				"y": 439.66666666666663
+			},
+			"selected": true,
+			"type": "capsule"
+		},
+		{
+			"id": "a8713a36-33f2-4409-802c-268d83e37992",
+			"position": {
+				"x": 855,
+				"y": 135
+			},
+			"type": "dataset"
+		},
+		{
+			"data": {
+				"capsule_id": "59376165-6b62-43f8-a4a4-8e16102d6bd0"
+			},
+			"id": "capsule_aind_vr_foraging_processing_nwb_packaging_3",
+			"position": {
+				"x": 633,
+				"y": 716.6666666666666
+			},
+			"selected": false,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1751483204867,
+	"timestamp": 1752606981342,
 	"viewport": {
-		"x": 0,
-		"y": 0,
+		"x": 78,
+		"y": 89,
 		"zoom": 0.75
 	}
 }

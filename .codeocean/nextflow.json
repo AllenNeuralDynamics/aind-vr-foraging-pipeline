@@ -6,11 +6,77 @@
 			"capsule": {
 				"id": "6e6b5a5d-2f83-48db-a10d-b7a5eb42e1fc",
 				"name": "aind-vr-foraging-primary-qc",
-				"slug": "2349123"
+				"slug": "2349123",
+				"commit": "188b725f83cc085cbf7557c2e106f4d5f53be982",
+				"image_tag": "2317daf65f39298eb11e89609f31203c"
 			},
 			"resources": {
 				"cpus": 1,
 				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "JaeiW3IDavZojqy7",
+					"source_id": "a8713a36-33f2-4409-802c-268d83e37992",
+					"type": "dataset",
+					"name": "vr_foraging_raw",
+					"source_path": "vr_foraging_raw/",
+					"target_path": "vr_foraging_raw",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "6e6b5a5d-2f83-48db-a10d-b7a5eb42e1fc"
+			}
+		},
+		{
+			"name": "capsule_vr_foraging_primary_data_nwb_packaging_2",
+			"capsule": {
+				"id": "51b7989c-8f37-4546-b936-a15e48ea8425",
+				"name": "aind-vr-foraging-primary-data-nwb-packaging",
+				"slug": "3265591",
+				"commit": "02cb5328365cdf1430908d343ac6853625e735c3",
+				"image_tag": "26926722206806e31b54ef077e53f08f"
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "ElrzrhySDvMA4K29",
+					"source_id": "a8713a36-33f2-4409-802c-268d83e37992",
+					"type": "dataset",
+					"name": "vr_foraging_raw",
+					"source_path": "vr_foraging_raw/",
+					"target_path": "vr_foraging_raw",
+					"collect": true
+				}
+			]
+		},
+		{
+			"name": "capsule_aind_vr_foraging_processing_nwb_packaging_3",
+			"capsule": {
+				"id": "59376165-6b62-43f8-a4a4-8e16102d6bd0",
+				"name": "aind-vr-foraging-processing-nwb-packaging",
+				"slug": "5107215"
+			},
+			"resources": {
+				"cpus": 4,
+				"memory": 32
+			},
+			"inputs": [
+				{
+					"id": "c1G0leMQvP1JGJVV",
+					"source_id": "capsule_vr_foraging_primary_data_nwb_packaging_2",
+					"type": "capsule",
+					"name": "aind-vr-foraging-primary-data-nwb-packaging",
+					"target_path": "vr_foraging_raw_nwb",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "59376165-6b62-43f8-a4a4-8e16102d6bd0"
 			}
 		}
 	]
