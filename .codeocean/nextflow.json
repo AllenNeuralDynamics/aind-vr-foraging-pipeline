@@ -16,7 +16,7 @@
 			},
 			"inputs": [
 				{
-					"id": "JaeiW3IDavZojqy7",
+					"id": "SCuM0BrXBftlhq3J",
 					"source_id": "a8713a36-33f2-4409-802c-268d83e37992",
 					"type": "dataset",
 					"name": "vr_foraging_raw",
@@ -35,8 +35,8 @@
 				"id": "51b7989c-8f37-4546-b936-a15e48ea8425",
 				"name": "aind-vr-foraging-primary-data-nwb-packaging",
 				"slug": "3265591",
-				"commit": "02cb5328365cdf1430908d343ac6853625e735c3",
-				"image_tag": "26926722206806e31b54ef077e53f08f"
+				"commit": "c5ea0dbaeffb6133f64cace7c94a5fc4ba54b56a",
+				"image_tag": "b47a46f0c29713d32e397392ef40133f"
 			},
 			"resources": {
 				"cpus": 1,
@@ -52,31 +52,37 @@
 					"target_path": "vr_foraging_raw",
 					"collect": true
 				}
-			]
+			],
+			"results": {
+				"id": "51b7989c-8f37-4546-b936-a15e48ea8425"
+			}
 		},
 		{
-			"name": "capsule_aind_vr_foraging_processing_nwb_packaging_3",
+			"name": "capsule_aind_pipeline_processing_metadata_aggregator_3",
 			"capsule": {
-				"id": "59376165-6b62-43f8-a4a4-8e16102d6bd0",
-				"name": "aind-vr-foraging-processing-nwb-packaging",
-				"slug": "5107215"
+				"id": "2b968496-f5cd-47ce-b2ec-3c9d48c73a14",
+				"name": "aind-pipeline-processing-metadata-aggregator",
+				"slug": "0249670",
+				"commit": "51fbabccca89050e39b674dd1270f00d4977d6bf",
+				"image_tag": "bd71a7af034314ca5a9719efd9c39421",
+				"app_panel": true
 			},
 			"resources": {
-				"cpus": 4,
-				"memory": 32
+				"cpus": 1,
+				"memory": 8
 			},
 			"inputs": [
 				{
-					"id": "c1G0leMQvP1JGJVV",
-					"source_id": "capsule_vr_foraging_primary_data_nwb_packaging_2",
-					"type": "capsule",
-					"name": "aind-vr-foraging-primary-data-nwb-packaging",
-					"target_path": "vr_foraging_raw_nwb",
+					"id": "4QFZxbUEqAJpihw2",
+					"source_id": "a8713a36-33f2-4409-802c-268d83e37992",
+					"type": "dataset",
+					"name": "vr_foraging_raw",
+					"source_path": "vr_foraging_raw/*.json",
 					"collect": true
 				}
 			],
 			"results": {
-				"id": "59376165-6b62-43f8-a4a4-8e16102d6bd0"
+				"id": "2b968496-f5cd-47ce-b2ec-3c9d48c73a14"
 			}
 		}
 	]
