@@ -7,10 +7,27 @@
 			"target": "capsule_vr_foraging_primary_data_nwb_packaging_2"
 		},
 		{
+			"id": "xy-edge__capsule_vr_foraging_primary_data_nwb_packaging_2-capsule_aind_vr_foraging_processing_nwb_packaging_4",
+			"selected": false,
+			"source": "capsule_vr_foraging_primary_data_nwb_packaging_2",
+			"target": "capsule_aind_vr_foraging_processing_nwb_packaging_4"
+		},
+		{
 			"id": "xy-edge__a8713a36-33f2-4409-802c-268d83e37992-capsule_aind_vr_foraging_primary_qc_1",
 			"selected": false,
 			"source": "a8713a36-33f2-4409-802c-268d83e37992",
 			"target": "capsule_aind_vr_foraging_primary_qc_1"
+		},
+		{
+			"id": "xy-edge__capsule_aind_vr_foraging_processing_nwb_packaging_4-capsule_aind_vr_foraging_processing_qc_5",
+			"selected": false,
+			"source": "capsule_aind_vr_foraging_processing_nwb_packaging_4",
+			"target": "capsule_aind_vr_foraging_processing_qc_5"
+		},
+		{
+			"id": "xy-edge__capsule_aind_vr_foraging_processing_qc_5-results",
+			"source": "capsule_aind_vr_foraging_processing_qc_5",
+			"target": "results"
 		},
 		{
 			"id": "xy-edge__capsule_aind_vr_foraging_primary_qc_1-results",
@@ -18,9 +35,19 @@
 			"target": "results"
 		},
 		{
-			"id": "xy-edge__capsule_vr_foraging_primary_data_nwb_packaging_2-results",
-			"source": "capsule_vr_foraging_primary_data_nwb_packaging_2",
+			"id": "xy-edge__capsule_aind_vr_foraging_processing_nwb_packaging_4-results",
+			"source": "capsule_aind_vr_foraging_processing_nwb_packaging_4",
 			"target": "results"
+		},
+		{
+			"id": "xy-edge__capsule_aind_vr_foraging_primary_qc_1-capsule_aind_vr_foraging_processing_qc_5",
+			"source": "capsule_aind_vr_foraging_primary_qc_1",
+			"target": "capsule_aind_vr_foraging_processing_qc_5"
+		},
+		{
+			"id": "xy-edge__a8713a36-33f2-4409-802c-268d83e37992-capsule_aind_pipeline_processing_metadata_aggregator_3",
+			"source": "a8713a36-33f2-4409-802c-268d83e37992",
+			"target": "capsule_aind_pipeline_processing_metadata_aggregator_3"
 		},
 		{
 			"id": "xy-edge__capsule_aind_pipeline_processing_metadata_aggregator_3-results",
@@ -28,8 +55,9 @@
 			"target": "results"
 		},
 		{
-			"id": "xy-edge__a8713a36-33f2-4409-802c-268d83e37992-capsule_aind_pipeline_processing_metadata_aggregator_3",
-			"source": "a8713a36-33f2-4409-802c-268d83e37992",
+			"id": "xy-edge__capsule_aind_vr_foraging_processing_nwb_packaging_4-capsule_aind_pipeline_processing_metadata_aggregator_3",
+			"selected": false,
+			"source": "capsule_aind_vr_foraging_processing_nwb_packaging_4",
 			"target": "capsule_aind_pipeline_processing_metadata_aggregator_3"
 		}
 	],
@@ -40,17 +68,17 @@
 			},
 			"id": "capsule_aind_vr_foraging_primary_qc_1",
 			"position": {
-				"x": 1165.1405626399346,
-				"y": 355.18979210320794
+				"x": 725.5157340152901,
+				"y": 546.3512333305845
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
 			"id": "results",
 			"position": {
-				"x": 1051.6666666666665,
-				"y": 1070.3333333333335
+				"x": 607.6666666666666,
+				"y": 1592.9577496846516
 			},
 			"selected": false,
 			"type": "results"
@@ -61,8 +89,8 @@
 			},
 			"id": "capsule_vr_foraging_primary_data_nwb_packaging_2",
 			"position": {
-				"x": 446.3448428080104,
-				"y": 374.3161606650441
+				"x": 429.3448428080104,
+				"y": 320.3161606650441
 			},
 			"selected": false,
 			"type": "capsule"
@@ -73,6 +101,7 @@
 				"x": 855,
 				"y": 135
 			},
+			"selected": false,
 			"type": "dataset"
 		},
 		{
@@ -81,17 +110,41 @@
 			},
 			"id": "capsule_aind_pipeline_processing_metadata_aggregator_3",
 			"position": {
-				"x": 832.8028666127323,
-				"y": 561.1526141344405
+				"x": 1143.5776202972515,
+				"y": 1074.0991671867944
 			},
 			"selected": false,
 			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "59376165-6b62-43f8-a4a4-8e16102d6bd0"
+			},
+			"id": "capsule_aind_vr_foraging_processing_nwb_packaging_4",
+			"position": {
+				"x": 71.0910735179348,
+				"y": 643.4972228590487
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "2b465a66-8c6b-4abb-a095-3c714039d39a"
+			},
+			"id": "capsule_aind_vr_foraging_processing_qc_5",
+			"position": {
+				"x": 449.4173666809213,
+				"y": 1005.1274278102203
+			},
+			"selected": true,
+			"type": "capsule"
 		}
 	],
-	"timestamp": 1753731739736,
+	"timestamp": 1754938702926,
 	"viewport": {
-		"x": 11.691427328672091,
-		"y": 27.466276974149963,
-		"zoom": 0.4948154665398357
+		"x": 357.8297083632049,
+		"y": -44.21672906339762,
+		"zoom": 0.43527528164806223
 	}
 }
