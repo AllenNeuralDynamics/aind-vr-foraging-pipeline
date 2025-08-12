@@ -36,8 +36,8 @@
 				"id": "51b7989c-8f37-4546-b936-a15e48ea8425",
 				"name": "aind-vr-foraging-primary-data-nwb-packaging",
 				"slug": "3265591",
-				"commit": "c5ea0dbaeffb6133f64cace7c94a5fc4ba54b56a",
-				"image_tag": "b47a46f0c29713d32e397392ef40133f"
+				"commit": "60754089c86953d3295adacdcfc8b9ce1b8be21c",
+				"image_tag": "154c87d64a3601553b393bc8abfda66c"
 			},
 			"resources": {
 				"cpus": 1,
@@ -56,48 +56,12 @@
 			]
 		},
 		{
-			"name": "capsule_aind_pipeline_processing_metadata_aggregator_3",
-			"capsule": {
-				"id": "2b968496-f5cd-47ce-b2ec-3c9d48c73a14",
-				"name": "aind-pipeline-processing-metadata-aggregator",
-				"slug": "0249670",
-				"commit": "4d41f9178dbfe9abfbfcfcca037ffafe26a1cf95",
-				"image_tag": "bd71a7af034314ca5a9719efd9c39421",
-				"app_panel": true
-			},
-			"resources": {
-				"cpus": 1,
-				"memory": 8
-			},
-			"inputs": [
-				{
-					"id": "hamnJAw0jZI7aFLt",
-					"source_id": "capsule_aind_vr_foraging_processing_nwb_packaging_4",
-					"type": "capsule",
-					"name": "aind-vr-foraging-processing-nwb-packaging",
-					"source_path": "*.json",
-					"collect": true
-				},
-				{
-					"id": "fBCHd3HbANvPp4J9",
-					"source_id": "a8713a36-33f2-4409-802c-268d83e37992",
-					"type": "dataset",
-					"name": "vr_foraging_raw",
-					"source_path": "vr_foraging_raw/",
-					"collect": true
-				}
-			],
-			"results": {
-				"id": "2b968496-f5cd-47ce-b2ec-3c9d48c73a14"
-			}
-		},
-		{
 			"name": "capsule_aind_vr_foraging_processing_nwb_packaging_4",
 			"capsule": {
 				"id": "59376165-6b62-43f8-a4a4-8e16102d6bd0",
 				"name": "aind-vr-foraging-processing-nwb-packaging",
 				"slug": "5107215",
-				"commit": "482f13605b5d4f3d99cadc6667ebca29d69b0e59",
+				"commit": "5b1d274734564b29c9e8876234717eb1149dbf4e",
 				"image_tag": "e88d19ff2dae586165fe6b44b8abaf23"
 			},
 			"resources": {
@@ -151,6 +115,41 @@
 			],
 			"results": {
 				"id": "2b465a66-8c6b-4abb-a095-3c714039d39a"
+			}
+		},
+		{
+			"name": "capsule_aind_pipeline_processing_metadata_aggregator_6",
+			"capsule": {
+				"id": "d51df783-d892-4304-a129-238a9baea72a",
+				"name": "aind-pipeline-processing-metadata-aggregator",
+				"slug": "8250608",
+				"version": 5,
+				"app_panel": true
+			},
+			"resources": {
+				"cpus": 1,
+				"memory": 8
+			},
+			"inputs": [
+				{
+					"id": "rStuK78RlBErnRS6",
+					"source_id": "a8713a36-33f2-4409-802c-268d83e37992",
+					"type": "dataset",
+					"name": "vr_foraging_raw",
+					"source_path": "vr_foraging_raw/",
+					"collect": true
+				},
+				{
+					"id": "ZN6YNgNQixGrS6oi",
+					"source_id": "capsule_aind_vr_foraging_processing_nwb_packaging_4",
+					"type": "capsule",
+					"name": "aind-vr-foraging-processing-nwb-packaging",
+					"source_path": "*.json",
+					"collect": true
+				}
+			],
+			"results": {
+				"id": "d51df783-d892-4304-a129-238a9baea72a"
 			}
 		}
 	]

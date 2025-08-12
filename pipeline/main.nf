@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:a4af3aa0f05f223b02d0223df6f5ae15609cbe057d15cdb37ae19a45e85045cd
+// hash:sha256:95a17812bf96237ddc95beb4c50a191461efcc41567acf571132f11763927d50
 
 // capsule - aind-vr-foraging-primary-qc
 process capsule_aind_vr_foraging_primary_qc_1 {
@@ -16,7 +16,7 @@ process capsule_aind_vr_foraging_primary_qc_1 {
 
 	output:
 	path 'capsule/results/*.png'
-	path 'capsule/results/quality_control.json', emit: to_capsule_aind_vr_foraging_processing_qc_5_6
+	path 'capsule/results/quality_control.json', emit: to_capsule_aind_vr_foraging_processing_qc_5_4
 
 	script:
 	"""
@@ -54,7 +54,7 @@ process capsule_aind_vr_foraging_primary_qc_1 {
 // capsule - aind-vr-foraging-primary-data-nwb-packaging
 process capsule_vr_foraging_primary_data_nwb_packaging_2 {
 	tag 'capsule-3265591'
-	container "$REGISTRY_HOST/capsule/51b7989c-8f37-4546-b936-a15e48ea8425:b47a46f0c29713d32e397392ef40133f"
+	container "$REGISTRY_HOST/capsule/51b7989c-8f37-4546-b936-a15e48ea8425:154c87d64a3601553b393bc8abfda66c"
 
 	cpus 1
 	memory '7.5 GB'
@@ -63,7 +63,7 @@ process capsule_vr_foraging_primary_data_nwb_packaging_2 {
 	path 'capsule/data/vr_foraging_raw'
 
 	output:
-	path 'capsule/results/*', emit: to_capsule_aind_vr_foraging_processing_nwb_packaging_4_5
+	path 'capsule/results/*', emit: to_capsule_aind_vr_foraging_processing_nwb_packaging_4_3
 
 	script:
 	"""
@@ -85,7 +85,7 @@ process capsule_vr_foraging_primary_data_nwb_packaging_2 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3265591.git" capsule-repo
 	fi
-	git -C capsule-repo checkout c5ea0dbaeffb6133f64cace7c94a5fc4ba54b56a --quiet
+	git -C capsule-repo checkout 60754089c86953d3295adacdcfc8b9ce1b8be21c --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -112,9 +112,9 @@ process capsule_aind_vr_foraging_processing_nwb_packaging_4 {
 	path 'capsule/data/vr_foraging_raw_nwb/'
 
 	output:
-	path 'capsule/results/*.json', emit: to_capsule_aind_pipeline_processing_metadata_aggregator_3_3
 	path 'capsule/results/*'
-	path 'capsule/results/*', emit: to_capsule_aind_vr_foraging_processing_qc_5_7
+	path 'capsule/results/*', emit: to_capsule_aind_vr_foraging_processing_qc_5_5
+	path 'capsule/results/*.json', emit: to_capsule_aind_pipeline_processing_metadata_aggregator_6_7
 
 	script:
 	"""
@@ -136,7 +136,7 @@ process capsule_aind_vr_foraging_processing_nwb_packaging_4 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5107215.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 482f13605b5d4f3d99cadc6667ebca29d69b0e59 --quiet
+	git -C capsule-repo checkout 5b1d274734564b29c9e8876234717eb1149dbf4e --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -150,9 +150,9 @@ process capsule_aind_vr_foraging_processing_nwb_packaging_4 {
 }
 
 // capsule - aind-pipeline-processing-metadata-aggregator
-process capsule_aind_pipeline_processing_metadata_aggregator_3 {
-	tag 'capsule-0249670'
-	container "$REGISTRY_HOST/capsule/2b968496-f5cd-47ce-b2ec-3c9d48c73a14:bd71a7af034314ca5a9719efd9c39421"
+process capsule_aind_pipeline_processing_metadata_aggregator_6 {
+	tag 'capsule-8250608'
+	container "$REGISTRY_HOST/published/d51df783-d892-4304-a129-238a9baea72a:v5"
 
 	cpus 1
 	memory '7.5 GB'
@@ -160,8 +160,8 @@ process capsule_aind_pipeline_processing_metadata_aggregator_3 {
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
-	path 'capsule/data/'
 	path 'capsule/data'
+	path 'capsule/data/'
 
 	output:
 	path 'capsule/results/*'
@@ -171,7 +171,7 @@ process capsule_aind_pipeline_processing_metadata_aggregator_3 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=2b968496-f5cd-47ce-b2ec-3c9d48c73a14
+	export CO_CAPSULE_ID=d51df783-d892-4304-a129-238a9baea72a
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -182,18 +182,17 @@ process capsule_aind_pipeline_processing_metadata_aggregator_3 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git clone --filter=tree:0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0249670.git" capsule-repo
+		git clone --filter=tree:0 --branch v5.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8250608.git" capsule-repo
 	else
-		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-0249670.git" capsule-repo
+		git clone --branch v5.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8250608.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 4d41f9178dbfe9abfbfcfcca037ffafe26a1cf95 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run ${params.capsule_aind_pipeline_processing_metadata_aggregator_3_args}
+	./run ${params.capsule_aind_pipeline_processing_metadata_aggregator_6_args}
 
 	echo "[${task.tag}] completed!"
 	"""
@@ -255,12 +254,12 @@ workflow {
 	// input data
 	vr_foraging_raw_to_aind_vr_foraging_primary_qc_1 = Channel.fromPath(params.vr_foraging_raw_url + "/", type: 'any')
 	vr_foraging_raw_to_aind_vr_foraging_primary_data_nwb_packaging_2 = Channel.fromPath(params.vr_foraging_raw_url + "/", type: 'any')
-	vr_foraging_raw_to_aind_pipeline_processing_metadata_aggregator_4 = Channel.fromPath(params.vr_foraging_raw_url + "/", type: 'any')
+	vr_foraging_raw_to_aind_pipeline_processing_metadata_aggregator_6 = Channel.fromPath(params.vr_foraging_raw_url + "/", type: 'any')
 
 	// run processes
 	capsule_aind_vr_foraging_primary_qc_1(vr_foraging_raw_to_aind_vr_foraging_primary_qc_1.collect())
 	capsule_vr_foraging_primary_data_nwb_packaging_2(vr_foraging_raw_to_aind_vr_foraging_primary_data_nwb_packaging_2.collect())
-	capsule_aind_vr_foraging_processing_nwb_packaging_4(capsule_vr_foraging_primary_data_nwb_packaging_2.out.to_capsule_aind_vr_foraging_processing_nwb_packaging_4_5.collect())
-	capsule_aind_pipeline_processing_metadata_aggregator_3(capsule_aind_vr_foraging_processing_nwb_packaging_4.out.to_capsule_aind_pipeline_processing_metadata_aggregator_3_3.collect(), vr_foraging_raw_to_aind_pipeline_processing_metadata_aggregator_4.collect())
-	capsule_aind_vr_foraging_processing_qc_5(capsule_aind_vr_foraging_primary_qc_1.out.to_capsule_aind_vr_foraging_processing_qc_5_6, capsule_aind_vr_foraging_processing_nwb_packaging_4.out.to_capsule_aind_vr_foraging_processing_qc_5_7.collect())
+	capsule_aind_vr_foraging_processing_nwb_packaging_4(capsule_vr_foraging_primary_data_nwb_packaging_2.out.to_capsule_aind_vr_foraging_processing_nwb_packaging_4_3.collect())
+	capsule_aind_pipeline_processing_metadata_aggregator_6(vr_foraging_raw_to_aind_pipeline_processing_metadata_aggregator_6.collect(), capsule_aind_vr_foraging_processing_nwb_packaging_4.out.to_capsule_aind_pipeline_processing_metadata_aggregator_6_7.collect())
+	capsule_aind_vr_foraging_processing_qc_5(capsule_aind_vr_foraging_primary_qc_1.out.to_capsule_aind_vr_foraging_processing_qc_5_4, capsule_aind_vr_foraging_processing_nwb_packaging_4.out.to_capsule_aind_vr_foraging_processing_qc_5_5.collect())
 }

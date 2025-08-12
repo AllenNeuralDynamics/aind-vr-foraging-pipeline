@@ -45,20 +45,21 @@
 			"target": "capsule_aind_vr_foraging_processing_qc_5"
 		},
 		{
-			"id": "xy-edge__a8713a36-33f2-4409-802c-268d83e37992-capsule_aind_pipeline_processing_metadata_aggregator_3",
-			"source": "a8713a36-33f2-4409-802c-268d83e37992",
-			"target": "capsule_aind_pipeline_processing_metadata_aggregator_3"
-		},
-		{
-			"id": "xy-edge__capsule_aind_pipeline_processing_metadata_aggregator_3-results",
-			"source": "capsule_aind_pipeline_processing_metadata_aggregator_3",
-			"target": "results"
-		},
-		{
-			"id": "xy-edge__capsule_aind_vr_foraging_processing_nwb_packaging_4-capsule_aind_pipeline_processing_metadata_aggregator_3",
+			"id": "xy-edge__capsule_aind_vr_foraging_processing_nwb_packaging_4-capsule_aind_pipeline_processing_metadata_aggregator_6",
 			"selected": false,
 			"source": "capsule_aind_vr_foraging_processing_nwb_packaging_4",
-			"target": "capsule_aind_pipeline_processing_metadata_aggregator_3"
+			"target": "capsule_aind_pipeline_processing_metadata_aggregator_6"
+		},
+		{
+			"id": "xy-edge__a8713a36-33f2-4409-802c-268d83e37992-capsule_aind_pipeline_processing_metadata_aggregator_6",
+			"selected": true,
+			"source": "a8713a36-33f2-4409-802c-268d83e37992",
+			"target": "capsule_aind_pipeline_processing_metadata_aggregator_6"
+		},
+		{
+			"id": "xy-edge__capsule_aind_pipeline_processing_metadata_aggregator_6-results",
+			"source": "capsule_aind_pipeline_processing_metadata_aggregator_6",
+			"target": "results"
 		}
 	],
 	"nodes": [
@@ -98,23 +99,11 @@
 		{
 			"id": "a8713a36-33f2-4409-802c-268d83e37992",
 			"position": {
-				"x": 855,
-				"y": 135
+				"x": 1041,
+				"y": 61.00000000000006
 			},
 			"selected": false,
 			"type": "dataset"
-		},
-		{
-			"data": {
-				"capsule_id": "2b968496-f5cd-47ce-b2ec-3c9d48c73a14"
-			},
-			"id": "capsule_aind_pipeline_processing_metadata_aggregator_3",
-			"position": {
-				"x": 1143.5776202972515,
-				"y": 1074.0991671867944
-			},
-			"selected": false,
-			"type": "capsule"
 		},
 		{
 			"data": {
@@ -137,14 +126,26 @@
 				"x": 449.4173666809213,
 				"y": 1005.1274278102203
 			},
-			"selected": true,
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "d51df783-d892-4304-a129-238a9baea72a"
+			},
+			"id": "capsule_aind_pipeline_processing_metadata_aggregator_6",
+			"position": {
+				"x": 968.5595493631013,
+				"y": 968.0389216719627
+			},
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1754938702926,
+	"timestamp": 1755032057377,
 	"viewport": {
-		"x": 357.8297083632049,
-		"y": -44.21672906339762,
-		"zoom": 0.43527528164806223
+		"x": 164.0145854088463,
+		"y": -279.30051964183656,
+		"zoom": 0.5000000000000004
 	}
 }
