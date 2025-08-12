@@ -54,12 +54,12 @@ There are currently 5 steps in the pipeline, some of which run simultaneously. T
 The pipeline currently outputs the following:
 
 ```
-📂 behavior_789923_2025-05-13_16-16-16_processed_2025-08-11_23-23-53
+📂 behavior_subjectID_YYYY-MM-DD_HH-M-S_processed_YYYY-MM-DD_HH-M-S
 ├── 🖼️ CameraTestSuite_test_histogram_and_create_asset_5f15aa74edb34f33ad57b9f8ad52ffec.png
 ├── 🖼️ CameraTestSuite_test_histogram_and_create_asset_b327cb8093a046708f01f559bfcc12f2.png
 ├── 🖼️ CameraTestSuite_test_histogram_and_create_asset_eb04c4d54cb740eabfe00fa58fcceb90.png
 ├── 🖼️ HarpSniffDetectorTestSuite_test_sniff_detector_physiology_7175620e05ce496197174540704130dc.png
-├── 📂 behavior_789923_2025-05-13_16-16-16_nwb-processed
+├── 📂 behavior_subjectID_YYYY-MM-DD_HH-M-S_nwb-processed
 │   ├── 📄 .zattrs
 │   ├── 📄 .zgroup
 │   ├── 📄 .zmetadata
