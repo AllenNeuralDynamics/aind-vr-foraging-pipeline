@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:95a17812bf96237ddc95beb4c50a191461efcc41567acf571132f11763927d50
+// hash:sha256:f3c6ba71c6efccdc89376d9c166e0fc8d2c33e67876d0e32efd134b2f60e41a4
 
 // capsule - aind-vr-foraging-primary-qc
 process capsule_aind_vr_foraging_primary_qc_1 {
@@ -16,7 +16,7 @@ process capsule_aind_vr_foraging_primary_qc_1 {
 
 	output:
 	path 'capsule/results/*.png'
-	path 'capsule/results/quality_control.json', emit: to_capsule_aind_vr_foraging_processing_qc_5_4
+	path 'capsule/results/quality_control.json', emit: to_capsule_aind_vr_foraging_processing_qc_5_6
 
 	script:
 	"""
@@ -63,7 +63,7 @@ process capsule_vr_foraging_primary_data_nwb_packaging_2 {
 	path 'capsule/data/vr_foraging_raw'
 
 	output:
-	path 'capsule/results/*', emit: to_capsule_aind_vr_foraging_processing_nwb_packaging_4_3
+	path 'capsule/results/*', emit: to_capsule_aind_vr_foraging_processing_nwb_packaging_4_5
 
 	script:
 	"""
@@ -85,7 +85,7 @@ process capsule_vr_foraging_primary_data_nwb_packaging_2 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3265591.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 60754089c86953d3295adacdcfc8b9ce1b8be21c --quiet
+	git -C capsule-repo checkout 534194a6b8fb3df8cadefee2ca895666e2a5674d --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -106,15 +106,19 @@ process capsule_aind_vr_foraging_processing_nwb_packaging_4 {
 	cpus 4
 	memory '30 GB'
 
+	cache 'deep'
+
 	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
+	path 'capsule/data/'
+	path 'capsule/data/'
 	path 'capsule/data/vr_foraging_raw_nwb/'
 
 	output:
 	path 'capsule/results/*'
-	path 'capsule/results/*', emit: to_capsule_aind_vr_foraging_processing_qc_5_5
-	path 'capsule/results/*.json', emit: to_capsule_aind_pipeline_processing_metadata_aggregator_6_7
+	path 'capsule/results/*', emit: to_capsule_aind_vr_foraging_processing_qc_5_7
+	path 'capsule/results/*.json', emit: to_capsule_aind_pipeline_processing_metadata_aggregator_6_9
 
 	script:
 	"""
@@ -136,7 +140,7 @@ process capsule_aind_vr_foraging_processing_nwb_packaging_4 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5107215.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 5b1d274734564b29c9e8876234717eb1149dbf4e --quiet
+	git -C capsule-repo checkout a331993d69fc97d17d85cf53718ae33648a16d0c --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -235,7 +239,7 @@ process capsule_aind_vr_foraging_processing_qc_5 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3338802.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 2b71bc55bbac6f543bcde43910ad4e3e61d2cdc4 --quiet
+	git -C capsule-repo checkout ee3d55981da1aeb2784dfd93c9521fcacf231ac9 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -248,18 +252,20 @@ process capsule_aind_vr_foraging_processing_qc_5 {
 	"""
 }
 
-params.vr_foraging_raw_url = 's3://aind-private-data-prod-o5171v/behavior_789923_2025-05-13_16-16-16'
+params.vr_foraging_raw_url = 's3://aind-private-data-prod-o5171v/behavior_789924_2025-06-25_18-35-44'
 
 workflow {
 	// input data
 	vr_foraging_raw_to_aind_vr_foraging_primary_qc_1 = Channel.fromPath(params.vr_foraging_raw_url + "/", type: 'any')
 	vr_foraging_raw_to_aind_vr_foraging_primary_data_nwb_packaging_2 = Channel.fromPath(params.vr_foraging_raw_url + "/", type: 'any')
-	vr_foraging_raw_to_aind_pipeline_processing_metadata_aggregator_6 = Channel.fromPath(params.vr_foraging_raw_url + "/", type: 'any')
+	hardware_mapping_to_aind_vr_foraging_processing_nwb_packaging_3 = Channel.fromPath("../data/hardware_mapping/*", type: 'any')
+	hed_tag_mapping_to_aind_vr_foraging_processing_nwb_packaging_4 = Channel.fromPath("../data/hed_tag_mapping/*", type: 'any')
+	vr_foraging_raw_to_aind_pipeline_processing_metadata_aggregator_8 = Channel.fromPath(params.vr_foraging_raw_url + "/", type: 'any')
 
 	// run processes
 	capsule_aind_vr_foraging_primary_qc_1(vr_foraging_raw_to_aind_vr_foraging_primary_qc_1.collect())
 	capsule_vr_foraging_primary_data_nwb_packaging_2(vr_foraging_raw_to_aind_vr_foraging_primary_data_nwb_packaging_2.collect())
-	capsule_aind_vr_foraging_processing_nwb_packaging_4(capsule_vr_foraging_primary_data_nwb_packaging_2.out.to_capsule_aind_vr_foraging_processing_nwb_packaging_4_3.collect())
-	capsule_aind_pipeline_processing_metadata_aggregator_6(vr_foraging_raw_to_aind_pipeline_processing_metadata_aggregator_6.collect(), capsule_aind_vr_foraging_processing_nwb_packaging_4.out.to_capsule_aind_pipeline_processing_metadata_aggregator_6_7.collect())
-	capsule_aind_vr_foraging_processing_qc_5(capsule_aind_vr_foraging_primary_qc_1.out.to_capsule_aind_vr_foraging_processing_qc_5_4, capsule_aind_vr_foraging_processing_nwb_packaging_4.out.to_capsule_aind_vr_foraging_processing_qc_5_5.collect())
+	capsule_aind_vr_foraging_processing_nwb_packaging_4(hardware_mapping_to_aind_vr_foraging_processing_nwb_packaging_3, hed_tag_mapping_to_aind_vr_foraging_processing_nwb_packaging_4, capsule_vr_foraging_primary_data_nwb_packaging_2.out.to_capsule_aind_vr_foraging_processing_nwb_packaging_4_5.collect())
+	capsule_aind_pipeline_processing_metadata_aggregator_6(vr_foraging_raw_to_aind_pipeline_processing_metadata_aggregator_8.collect(), capsule_aind_vr_foraging_processing_nwb_packaging_4.out.to_capsule_aind_pipeline_processing_metadata_aggregator_6_9.collect())
+	capsule_aind_vr_foraging_processing_qc_5(capsule_aind_vr_foraging_primary_qc_1.out.to_capsule_aind_vr_foraging_processing_qc_5_6, capsule_aind_vr_foraging_processing_nwb_packaging_4.out.to_capsule_aind_vr_foraging_processing_qc_5_7.collect())
 }

@@ -17,7 +17,7 @@
 			"inputs": [
 				{
 					"id": "i4zktfhrA4bbmoBS",
-					"source_id": "a8713a36-33f2-4409-802c-268d83e37992",
+					"source_id": "c7f7f50e-de94-4013-b064-f387e95591d2",
 					"type": "dataset",
 					"name": "vr_foraging_raw",
 					"source_path": "vr_foraging_raw/",
@@ -36,7 +36,7 @@
 				"id": "51b7989c-8f37-4546-b936-a15e48ea8425",
 				"name": "aind-vr-foraging-primary-data-nwb-packaging",
 				"slug": "3265591",
-				"commit": "60754089c86953d3295adacdcfc8b9ce1b8be21c",
+				"commit": "534194a6b8fb3df8cadefee2ca895666e2a5674d",
 				"image_tag": "154c87d64a3601553b393bc8abfda66c"
 			},
 			"resources": {
@@ -46,7 +46,7 @@
 			"inputs": [
 				{
 					"id": "ElrzrhySDvMA4K29",
-					"source_id": "a8713a36-33f2-4409-802c-268d83e37992",
+					"source_id": "c7f7f50e-de94-4013-b064-f387e95591d2",
 					"type": "dataset",
 					"name": "vr_foraging_raw",
 					"source_path": "vr_foraging_raw/",
@@ -61,7 +61,7 @@
 				"id": "59376165-6b62-43f8-a4a4-8e16102d6bd0",
 				"name": "aind-vr-foraging-processing-nwb-packaging",
 				"slug": "5107215",
-				"commit": "5b1d274734564b29c9e8876234717eb1149dbf4e",
+				"commit": "a331993d69fc97d17d85cf53718ae33648a16d0c",
 				"image_tag": "e88d19ff2dae586165fe6b44b8abaf23"
 			},
 			"resources": {
@@ -69,6 +69,20 @@
 				"memory": 32
 			},
 			"inputs": [
+				{
+					"id": "asbwtZb6JpKY9J8q",
+					"source_id": "data/hardware_mapping",
+					"type": "pipeline",
+					"name": "hardware_mapping",
+					"source_path": "hardware_mapping/"
+				},
+				{
+					"id": "olxuFMuucrnWL3BR",
+					"source_id": "data/hed_tag_mapping",
+					"type": "pipeline",
+					"name": "hed_tag_mapping",
+					"source_path": "hed_tag_mapping/"
+				},
 				{
 					"id": "SqCbHFCW6XYORuI9",
 					"source_id": "capsule_vr_foraging_primary_data_nwb_packaging_2",
@@ -88,7 +102,7 @@
 				"id": "2b465a66-8c6b-4abb-a095-3c714039d39a",
 				"name": "aind-vr-foraging-processing-qc",
 				"slug": "3338802",
-				"commit": "2b71bc55bbac6f543bcde43910ad4e3e61d2cdc4",
+				"commit": "ee3d55981da1aeb2784dfd93c9521fcacf231ac9",
 				"image_tag": "e60fab5afa6fe96062f7e159ca4c0ad4"
 			},
 			"resources": {
@@ -133,7 +147,7 @@
 			"inputs": [
 				{
 					"id": "rStuK78RlBErnRS6",
-					"source_id": "a8713a36-33f2-4409-802c-268d83e37992",
+					"source_id": "c7f7f50e-de94-4013-b064-f387e95591d2",
 					"type": "dataset",
 					"name": "vr_foraging_raw",
 					"source_path": "vr_foraging_raw/",

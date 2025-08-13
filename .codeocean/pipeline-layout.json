@@ -1,9 +1,8 @@
 {
 	"edges": [
 		{
-			"id": "xy-edge__a8713a36-33f2-4409-802c-268d83e37992-capsule_vr_foraging_primary_data_nwb_packaging_2",
-			"selected": false,
-			"source": "a8713a36-33f2-4409-802c-268d83e37992",
+			"id": "xy-edge__c7f7f50e-de94-4013-b064-f387e95591d2-capsule_vr_foraging_primary_data_nwb_packaging_2",
+			"source": "c7f7f50e-de94-4013-b064-f387e95591d2",
 			"target": "capsule_vr_foraging_primary_data_nwb_packaging_2"
 		},
 		{
@@ -13,9 +12,8 @@
 			"target": "capsule_aind_vr_foraging_processing_nwb_packaging_4"
 		},
 		{
-			"id": "xy-edge__a8713a36-33f2-4409-802c-268d83e37992-capsule_aind_vr_foraging_primary_qc_1",
-			"selected": false,
-			"source": "a8713a36-33f2-4409-802c-268d83e37992",
+			"id": "xy-edge__c7f7f50e-de94-4013-b064-f387e95591d2-capsule_aind_vr_foraging_primary_qc_1",
+			"source": "c7f7f50e-de94-4013-b064-f387e95591d2",
 			"target": "capsule_aind_vr_foraging_primary_qc_1"
 		},
 		{
@@ -51,15 +49,25 @@
 			"target": "capsule_aind_pipeline_processing_metadata_aggregator_6"
 		},
 		{
-			"id": "xy-edge__a8713a36-33f2-4409-802c-268d83e37992-capsule_aind_pipeline_processing_metadata_aggregator_6",
-			"selected": true,
-			"source": "a8713a36-33f2-4409-802c-268d83e37992",
+			"id": "xy-edge__c7f7f50e-de94-4013-b064-f387e95591d2-capsule_aind_pipeline_processing_metadata_aggregator_6",
+			"source": "c7f7f50e-de94-4013-b064-f387e95591d2",
 			"target": "capsule_aind_pipeline_processing_metadata_aggregator_6"
 		},
 		{
 			"id": "xy-edge__capsule_aind_pipeline_processing_metadata_aggregator_6-results",
 			"source": "capsule_aind_pipeline_processing_metadata_aggregator_6",
 			"target": "results"
+		},
+		{
+			"id": "xy-edge__data/hardware_mapping-capsule_aind_vr_foraging_processing_nwb_packaging_4",
+			"selected": false,
+			"source": "data/hardware_mapping",
+			"target": "capsule_aind_vr_foraging_processing_nwb_packaging_4"
+		},
+		{
+			"id": "xy-edge__data/hed_tag_mapping-capsule_aind_vr_foraging_processing_nwb_packaging_4",
+			"source": "data/hed_tag_mapping",
+			"target": "capsule_aind_vr_foraging_processing_nwb_packaging_4"
 		}
 	],
 	"nodes": [
@@ -97,15 +105,6 @@
 			"type": "capsule"
 		},
 		{
-			"id": "a8713a36-33f2-4409-802c-268d83e37992",
-			"position": {
-				"x": 1041,
-				"y": 61.00000000000006
-			},
-			"selected": false,
-			"type": "dataset"
-		},
-		{
 			"data": {
 				"capsule_id": "59376165-6b62-43f8-a4a4-8e16102d6bd0"
 			},
@@ -140,12 +139,38 @@
 			},
 			"selected": false,
 			"type": "capsule"
+		},
+		{
+			"id": "c7f7f50e-de94-4013-b064-f387e95591d2",
+			"position": {
+				"x": 1041,
+				"y": 61.00000000000006
+			},
+			"type": "dataset"
+		},
+		{
+			"id": "data/hardware_mapping",
+			"position": {
+				"x": -134.33333333333337,
+				"y": 153.33333333333334
+			},
+			"selected": false,
+			"type": "pipeline"
+		},
+		{
+			"id": "data/hed_tag_mapping",
+			"position": {
+				"x": 193.66666666666669,
+				"y": 160.66666666666669
+			},
+			"selected": true,
+			"type": "pipeline"
 		}
 	],
-	"timestamp": 1755032057377,
+	"timestamp": 1755105084581,
 	"viewport": {
-		"x": 164.0145854088463,
-		"y": -279.30051964183656,
-		"zoom": 0.5000000000000004
+		"x": 452,
+		"y": -7,
+		"zoom": 0.75
 	}
 }
