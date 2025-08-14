@@ -1,9 +1,8 @@
 {
 	"edges": [
 		{
-			"id": "xy-edge__a8713a36-33f2-4409-802c-268d83e37992-capsule_vr_foraging_primary_data_nwb_packaging_2",
-			"selected": false,
-			"source": "a8713a36-33f2-4409-802c-268d83e37992",
+			"id": "xy-edge__c7f7f50e-de94-4013-b064-f387e95591d2-capsule_vr_foraging_primary_data_nwb_packaging_2",
+			"source": "c7f7f50e-de94-4013-b064-f387e95591d2",
 			"target": "capsule_vr_foraging_primary_data_nwb_packaging_2"
 		},
 		{
@@ -13,9 +12,8 @@
 			"target": "capsule_aind_vr_foraging_processing_nwb_packaging_4"
 		},
 		{
-			"id": "xy-edge__a8713a36-33f2-4409-802c-268d83e37992-capsule_aind_vr_foraging_primary_qc_1",
-			"selected": false,
-			"source": "a8713a36-33f2-4409-802c-268d83e37992",
+			"id": "xy-edge__c7f7f50e-de94-4013-b064-f387e95591d2-capsule_aind_vr_foraging_primary_qc_1",
+			"source": "c7f7f50e-de94-4013-b064-f387e95591d2",
 			"target": "capsule_aind_vr_foraging_primary_qc_1"
 		},
 		{
@@ -45,20 +43,31 @@
 			"target": "capsule_aind_vr_foraging_processing_qc_5"
 		},
 		{
-			"id": "xy-edge__a8713a36-33f2-4409-802c-268d83e37992-capsule_aind_pipeline_processing_metadata_aggregator_3",
-			"source": "a8713a36-33f2-4409-802c-268d83e37992",
-			"target": "capsule_aind_pipeline_processing_metadata_aggregator_3"
+			"id": "xy-edge__capsule_aind_vr_foraging_processing_nwb_packaging_4-capsule_aind_pipeline_processing_metadata_aggregator_6",
+			"selected": false,
+			"source": "capsule_aind_vr_foraging_processing_nwb_packaging_4",
+			"target": "capsule_aind_pipeline_processing_metadata_aggregator_6"
 		},
 		{
-			"id": "xy-edge__capsule_aind_pipeline_processing_metadata_aggregator_3-results",
-			"source": "capsule_aind_pipeline_processing_metadata_aggregator_3",
+			"id": "xy-edge__c7f7f50e-de94-4013-b064-f387e95591d2-capsule_aind_pipeline_processing_metadata_aggregator_6",
+			"source": "c7f7f50e-de94-4013-b064-f387e95591d2",
+			"target": "capsule_aind_pipeline_processing_metadata_aggregator_6"
+		},
+		{
+			"id": "xy-edge__capsule_aind_pipeline_processing_metadata_aggregator_6-results",
+			"source": "capsule_aind_pipeline_processing_metadata_aggregator_6",
 			"target": "results"
 		},
 		{
-			"id": "xy-edge__capsule_aind_vr_foraging_processing_nwb_packaging_4-capsule_aind_pipeline_processing_metadata_aggregator_3",
+			"id": "xy-edge__data/hardware_mapping-capsule_aind_vr_foraging_processing_nwb_packaging_4",
 			"selected": false,
-			"source": "capsule_aind_vr_foraging_processing_nwb_packaging_4",
-			"target": "capsule_aind_pipeline_processing_metadata_aggregator_3"
+			"source": "data/hardware_mapping",
+			"target": "capsule_aind_vr_foraging_processing_nwb_packaging_4"
+		},
+		{
+			"id": "xy-edge__data/hed_tag_mapping-capsule_aind_vr_foraging_processing_nwb_packaging_4",
+			"source": "data/hed_tag_mapping",
+			"target": "capsule_aind_vr_foraging_processing_nwb_packaging_4"
 		}
 	],
 	"nodes": [
@@ -96,27 +105,6 @@
 			"type": "capsule"
 		},
 		{
-			"id": "a8713a36-33f2-4409-802c-268d83e37992",
-			"position": {
-				"x": 855,
-				"y": 135
-			},
-			"selected": false,
-			"type": "dataset"
-		},
-		{
-			"data": {
-				"capsule_id": "2b968496-f5cd-47ce-b2ec-3c9d48c73a14"
-			},
-			"id": "capsule_aind_pipeline_processing_metadata_aggregator_3",
-			"position": {
-				"x": 1143.5776202972515,
-				"y": 1074.0991671867944
-			},
-			"selected": false,
-			"type": "capsule"
-		},
-		{
 			"data": {
 				"capsule_id": "59376165-6b62-43f8-a4a4-8e16102d6bd0"
 			},
@@ -137,14 +125,52 @@
 				"x": 449.4173666809213,
 				"y": 1005.1274278102203
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
+		},
+		{
+			"data": {
+				"capsule_id": "d51df783-d892-4304-a129-238a9baea72a"
+			},
+			"id": "capsule_aind_pipeline_processing_metadata_aggregator_6",
+			"position": {
+				"x": 968.5595493631013,
+				"y": 968.0389216719627
+			},
+			"selected": false,
+			"type": "capsule"
+		},
+		{
+			"id": "c7f7f50e-de94-4013-b064-f387e95591d2",
+			"position": {
+				"x": 1041,
+				"y": 61.00000000000006
+			},
+			"type": "dataset"
+		},
+		{
+			"id": "data/hardware_mapping",
+			"position": {
+				"x": -134.33333333333337,
+				"y": 153.33333333333334
+			},
+			"selected": false,
+			"type": "pipeline"
+		},
+		{
+			"id": "data/hed_tag_mapping",
+			"position": {
+				"x": 193.66666666666669,
+				"y": 160.66666666666669
+			},
+			"selected": true,
+			"type": "pipeline"
 		}
 	],
-	"timestamp": 1754938702926,
+	"timestamp": 1755105084581,
 	"viewport": {
-		"x": 357.8297083632049,
-		"y": -44.21672906339762,
-		"zoom": 0.43527528164806223
+		"x": 452,
+		"y": -7,
+		"zoom": 0.75
 	}
 }
