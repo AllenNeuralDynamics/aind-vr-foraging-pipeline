@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:f3c6ba71c6efccdc89376d9c166e0fc8d2c33e67876d0e32efd134b2f60e41a4
+// hash:sha256:79394e4f7bc9d9e8b36e2190b6513f9482401cab97cd59a415ada12c1eca2ca1
 
 // capsule - aind-vr-foraging-primary-qc
 process capsule_aind_vr_foraging_primary_qc_1 {
@@ -85,7 +85,7 @@ process capsule_vr_foraging_primary_data_nwb_packaging_2 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3265591.git" capsule-repo
 	fi
-	git -C capsule-repo checkout 534194a6b8fb3df8cadefee2ca895666e2a5674d --quiet
+	git -C capsule-repo checkout 725daef94e501e6c61d62ea2a6ae4b9407d3f774 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -140,7 +140,7 @@ process capsule_aind_vr_foraging_processing_nwb_packaging_4 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-5107215.git" capsule-repo
 	fi
-	git -C capsule-repo checkout a331993d69fc97d17d85cf53718ae33648a16d0c --quiet
+	git -C capsule-repo checkout fb7fc1d646e375e26cfc159d429dab47d47b9928 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 
@@ -205,7 +205,7 @@ process capsule_aind_pipeline_processing_metadata_aggregator_6 {
 // capsule - aind-vr-foraging-processing-qc
 process capsule_aind_vr_foraging_processing_qc_5 {
 	tag 'capsule-3338802'
-	container "$REGISTRY_HOST/capsule/2b465a66-8c6b-4abb-a095-3c714039d39a:e60fab5afa6fe96062f7e159ca4c0ad4"
+	container "$REGISTRY_HOST/capsule/2b465a66-8c6b-4abb-a095-3c714039d39a:963eb8d944e11e1f14190381af4b98ac"
 
 	cpus 1
 	memory '7.5 GB'
@@ -239,7 +239,7 @@ process capsule_aind_vr_foraging_processing_qc_5 {
 	else
 		git clone "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-3338802.git" capsule-repo
 	fi
-	git -C capsule-repo checkout ee3d55981da1aeb2784dfd93c9521fcacf231ac9 --quiet
+	git -C capsule-repo checkout 015aac1c2410e031ad173a1bb455d29863cd9963 --quiet
 	mv capsule-repo/code capsule/code
 	rm -rf capsule-repo
 

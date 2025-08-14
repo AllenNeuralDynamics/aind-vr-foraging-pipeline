@@ -36,7 +36,7 @@
 				"id": "51b7989c-8f37-4546-b936-a15e48ea8425",
 				"name": "aind-vr-foraging-primary-data-nwb-packaging",
 				"slug": "3265591",
-				"commit": "534194a6b8fb3df8cadefee2ca895666e2a5674d",
+				"commit": "725daef94e501e6c61d62ea2a6ae4b9407d3f774",
 				"image_tag": "154c87d64a3601553b393bc8abfda66c"
 			},
 			"resources": {
@@ -61,7 +61,7 @@
 				"id": "59376165-6b62-43f8-a4a4-8e16102d6bd0",
 				"name": "aind-vr-foraging-processing-nwb-packaging",
 				"slug": "5107215",
-				"commit": "a331993d69fc97d17d85cf53718ae33648a16d0c",
+				"commit": "fb7fc1d646e375e26cfc159d429dab47d47b9928",
 				"image_tag": "e88d19ff2dae586165fe6b44b8abaf23"
 			},
 			"resources": {
@@ -102,8 +102,8 @@
 				"id": "2b465a66-8c6b-4abb-a095-3c714039d39a",
 				"name": "aind-vr-foraging-processing-qc",
 				"slug": "3338802",
-				"commit": "ee3d55981da1aeb2784dfd93c9521fcacf231ac9",
-				"image_tag": "e60fab5afa6fe96062f7e159ca4c0ad4"
+				"commit": "015aac1c2410e031ad173a1bb455d29863cd9963",
+				"image_tag": "963eb8d944e11e1f14190381af4b98ac"
 			},
 			"resources": {
 				"cpus": 1,
