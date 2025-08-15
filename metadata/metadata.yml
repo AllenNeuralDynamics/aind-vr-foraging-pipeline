@@ -1,2 +1,8 @@
 metadata_version: 1
 name: aind-vr-foraging-pipeline
+description: Pipeline that process and packages data for the VR Foraging task
+authors:
+- name: Arjun Sridhar
+- name: Bruno Cruz
+- name: Tiffany Ona
+- name: Arielle Leon
