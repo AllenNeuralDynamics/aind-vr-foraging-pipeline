@@ -2,13 +2,12 @@
 	"version": 2,
 	"processes": [
 		{
-			"name": "capsule_aind_vr_foraging_primary_qc_1",
+			"name": "capsule_primary_qc_vr_foraging_1",
 			"capsule": {
-				"id": "6e6b5a5d-2f83-48db-a10d-b7a5eb42e1fc",
-				"name": "aind-vr-foraging-primary-qc",
-				"slug": "2349123",
-				"commit": "188b725f83cc085cbf7557c2e106f4d5f53be982",
-				"image_tag": "2317daf65f39298eb11e89609f31203c"
+				"id": "7486e654-3418-4050-ab38-11ff637bec9b",
+				"name": "primary-qc-vr-foraging",
+				"slug": "1600699",
+				"version": 1
 			},
 			"resources": {
 				"cpus": 1,
@@ -26,18 +25,17 @@
 				}
 			],
 			"results": {
-				"id": "6e6b5a5d-2f83-48db-a10d-b7a5eb42e1fc",
+				"id": "7486e654-3418-4050-ab38-11ff637bec9b",
 				"source_path": "*.png"
 			}
 		},
 		{
-			"name": "capsule_vr_foraging_primary_data_nwb_packaging_2",
+			"name": "capsule_primary_nwb_packaging_vr_foraging_2",
 			"capsule": {
-				"id": "51b7989c-8f37-4546-b936-a15e48ea8425",
-				"name": "aind-vr-foraging-primary-data-nwb-packaging",
-				"slug": "3265591",
-				"commit": "725daef94e501e6c61d62ea2a6ae4b9407d3f774",
-				"image_tag": "154c87d64a3601553b393bc8abfda66c"
+				"id": "37fe4bfc-5044-44cc-9270-0274a49050fe",
+				"name": "primary-nwb-packaging-vr-foraging",
+				"slug": "7841426",
+				"version": 1
 			},
 			"resources": {
 				"cpus": 1,
@@ -56,13 +54,12 @@
 			]
 		},
 		{
-			"name": "capsule_aind_vr_foraging_processing_nwb_packaging_4",
+			"name": "capsule_processing_nwb_packaging_vr_foraging_4",
 			"capsule": {
-				"id": "59376165-6b62-43f8-a4a4-8e16102d6bd0",
-				"name": "aind-vr-foraging-processing-nwb-packaging",
-				"slug": "5107215",
-				"commit": "fb7fc1d646e375e26cfc159d429dab47d47b9928",
-				"image_tag": "e88d19ff2dae586165fe6b44b8abaf23"
+				"id": "615eb7a0-d882-4705-a5c8-f267c18d3747",
+				"name": "processing-nwb-packaging-vr-foraging",
+				"slug": "3664899",
+				"version": 1
 			},
 			"resources": {
 				"cpus": 4,
@@ -85,25 +82,24 @@
 				},
 				{
 					"id": "SqCbHFCW6XYORuI9",
-					"source_id": "capsule_vr_foraging_primary_data_nwb_packaging_2",
+					"source_id": "capsule_primary_nwb_packaging_vr_foraging_2",
 					"type": "capsule",
-					"name": "aind-vr-foraging-primary-data-nwb-packaging",
+					"name": "primary-nwb-packaging-vr-foraging",
 					"target_path": "vr_foraging_raw_nwb",
 					"collect": true
 				}
 			],
 			"results": {
-				"id": "59376165-6b62-43f8-a4a4-8e16102d6bd0"
+				"id": "615eb7a0-d882-4705-a5c8-f267c18d3747"
 			}
 		},
 		{
-			"name": "capsule_aind_vr_foraging_processing_qc_5",
+			"name": "capsule_processing_qc_vr_foraging_5",
 			"capsule": {
-				"id": "2b465a66-8c6b-4abb-a095-3c714039d39a",
-				"name": "aind-vr-foraging-processing-qc",
-				"slug": "3338802",
-				"commit": "015aac1c2410e031ad173a1bb455d29863cd9963",
-				"image_tag": "963eb8d944e11e1f14190381af4b98ac"
+				"id": "7e1328ac-d888-46db-a433-09489299a35b",
+				"name": "processing-qc-vr-foraging",
+				"slug": "0042488",
+				"version": 1
 			},
 			"resources": {
 				"cpus": 1,
@@ -112,23 +108,23 @@
 			"inputs": [
 				{
 					"id": "TaH3UCdu3eHgnR2a",
-					"source_id": "capsule_aind_vr_foraging_primary_qc_1",
+					"source_id": "capsule_primary_qc_vr_foraging_1",
 					"type": "capsule",
-					"name": "aind-vr-foraging-primary-qc",
+					"name": "primary-qc-vr-foraging",
 					"source_path": "quality_control.json",
 					"target_path": "raw_qc.json"
 				},
 				{
 					"id": "Hrew8FEIw70qJcC1",
-					"source_id": "capsule_aind_vr_foraging_processing_nwb_packaging_4",
+					"source_id": "capsule_processing_nwb_packaging_vr_foraging_4",
 					"type": "capsule",
-					"name": "aind-vr-foraging-processing-nwb-packaging",
+					"name": "processing-nwb-packaging-vr-foraging",
 					"target_path": "vr_foraging_processed_nwb",
 					"collect": true
 				}
 			],
 			"results": {
-				"id": "2b465a66-8c6b-4abb-a095-3c714039d39a"
+				"id": "7e1328ac-d888-46db-a433-09489299a35b"
 			}
 		},
 		{
@@ -155,9 +151,9 @@
 				},
 				{
 					"id": "ZN6YNgNQixGrS6oi",
-					"source_id": "capsule_aind_vr_foraging_processing_nwb_packaging_4",
+					"source_id": "capsule_processing_nwb_packaging_vr_foraging_4",
 					"type": "capsule",
-					"name": "aind-vr-foraging-processing-nwb-packaging",
+					"name": "processing-nwb-packaging-vr-foraging",
 					"source_path": "*.json",
 					"collect": true
 				}
