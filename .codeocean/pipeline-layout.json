@@ -1,8 +1,8 @@
 {
 	"edges": [
 		{
-			"id": "xy-edge__337ede6d-3381-4bd1-a399-a1255de21638-capsule_primary_nwb_packaging_vr_foraging_2",
-			"source": "337ede6d-3381-4bd1-a399-a1255de21638",
+			"id": "xy-edge__8ba81807-66c5-4de6-9593-0e5540074f46-capsule_primary_nwb_packaging_vr_foraging_2",
+			"source": "8ba81807-66c5-4de6-9593-0e5540074f46",
 			"target": "capsule_primary_nwb_packaging_vr_foraging_2"
 		},
 		{
@@ -11,8 +11,8 @@
 			"target": "capsule_processing_nwb_packaging_vr_foraging_4"
 		},
 		{
-			"id": "xy-edge__337ede6d-3381-4bd1-a399-a1255de21638-capsule_primary_qc_vr_foraging_1",
-			"source": "337ede6d-3381-4bd1-a399-a1255de21638",
+			"id": "xy-edge__8ba81807-66c5-4de6-9593-0e5540074f46-capsule_primary_qc_vr_foraging_1",
+			"source": "8ba81807-66c5-4de6-9593-0e5540074f46",
 			"target": "capsule_primary_qc_vr_foraging_1"
 		},
 		{
@@ -46,8 +46,8 @@
 			"target": "capsule_aind_pipeline_processing_metadata_aggregator_6"
 		},
 		{
-			"id": "xy-edge__337ede6d-3381-4bd1-a399-a1255de21638-capsule_aind_pipeline_processing_metadata_aggregator_6",
-			"source": "337ede6d-3381-4bd1-a399-a1255de21638",
+			"id": "xy-edge__8ba81807-66c5-4de6-9593-0e5540074f46-capsule_aind_pipeline_processing_metadata_aggregator_6",
+			"source": "8ba81807-66c5-4de6-9593-0e5540074f46",
 			"target": "capsule_aind_pipeline_processing_metadata_aggregator_6"
 		},
 		{
@@ -155,7 +155,7 @@
 			"type": "capsule"
 		},
 		{
-			"id": "337ede6d-3381-4bd1-a399-a1255de21638",
+			"id": "8ba81807-66c5-4de6-9593-0e5540074f46",
 			"position": {
 				"x": 1041,
 				"y": 61.00000000000006
@@ -163,5 +163,5 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1760033184721
+	"timestamp": 1760035626046
 }
