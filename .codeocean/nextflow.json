@@ -7,7 +7,7 @@
 				"id": "7486e654-3418-4050-ab38-11ff637bec9b",
 				"name": "primary-qc-vr-foraging",
 				"slug": "1600699",
-				"version": 1
+				"version": 2
 			},
 			"resources": {
 				"cpus": 1,
@@ -35,7 +35,7 @@
 				"id": "37fe4bfc-5044-44cc-9270-0274a49050fe",
 				"name": "primary-nwb-packaging-vr-foraging",
 				"slug": "7841426",
-				"version": 1
+				"version": 2
 			},
 			"resources": {
 				"cpus": 1,
@@ -59,7 +59,7 @@
 				"id": "615eb7a0-d882-4705-a5c8-f267c18d3747",
 				"name": "processing-nwb-packaging-vr-foraging",
 				"slug": "3664899",
-				"version": 1
+				"version": 2
 			},
 			"resources": {
 				"cpus": 4,
@@ -99,7 +99,7 @@
 				"id": "7e1328ac-d888-46db-a433-09489299a35b",
 				"name": "processing-qc-vr-foraging",
 				"slug": "0042488",
-				"version": 1
+				"version": 2
 			},
 			"resources": {
 				"cpus": 1,
