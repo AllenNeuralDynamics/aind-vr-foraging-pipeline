@@ -7,7 +7,7 @@
 				"id": "7486e654-3418-4050-ab38-11ff637bec9b",
 				"name": "primary-qc-vr-foraging",
 				"slug": "1600699",
-				"version": 2
+				"version": 4
 			},
 			"resources": {
 				"cpus": 1,
@@ -16,7 +16,7 @@
 			"inputs": [
 				{
 					"id": "i4zktfhrA4bbmoBS",
-					"source_id": "8ba81807-66c5-4de6-9593-0e5540074f46",
+					"source_id": "a2286e5a-ed3e-4aa8-8e2a-23ac79ccc605",
 					"type": "dataset",
 					"name": "vr_foraging_raw",
 					"source_path": "vr_foraging_raw/",
@@ -36,7 +36,7 @@
 				"id": "37fe4bfc-5044-44cc-9270-0274a49050fe",
 				"name": "primary-nwb-packaging-vr-foraging",
 				"slug": "7841426",
-				"version": 2
+				"version": 4
 			},
 			"resources": {
 				"cpus": 1,
@@ -45,7 +45,7 @@
 			"inputs": [
 				{
 					"id": "ElrzrhySDvMA4K29",
-					"source_id": "8ba81807-66c5-4de6-9593-0e5540074f46",
+					"source_id": "a2286e5a-ed3e-4aa8-8e2a-23ac79ccc605",
 					"type": "dataset",
 					"name": "vr_foraging_raw",
 					"source_path": "vr_foraging_raw/",
@@ -60,7 +60,7 @@
 				"id": "615eb7a0-d882-4705-a5c8-f267c18d3747",
 				"name": "processing-nwb-packaging-vr-foraging",
 				"slug": "3664899",
-				"version": 2
+				"version": 3
 			},
 			"resources": {
 				"cpus": 4,
@@ -100,7 +100,7 @@
 				"id": "7e1328ac-d888-46db-a433-09489299a35b",
 				"name": "processing-qc-vr-foraging",
 				"slug": "0042488",
-				"version": 2
+				"version": 3
 			},
 			"resources": {
 				"cpus": 1,
@@ -129,12 +129,12 @@
 			}
 		},
 		{
-			"name": "capsule_aind_pipeline_processing_metadata_aggregator_6",
+			"name": "capsule_aind_pipeline_processing_metadata_aggregator_20_6",
 			"capsule": {
-				"id": "d51df783-d892-4304-a129-238a9baea72a",
-				"name": "aind-pipeline-processing-metadata-aggregator",
-				"slug": "8250608",
-				"version": 5,
+				"id": "278c12cc-fb64-4399-88cf-8bc3e6db6dc2",
+				"name": "aind-pipeline-processing-metadata-aggregator_2.0",
+				"slug": "8464459",
+				"version": 1,
 				"app_panel": true
 			},
 			"resources": {
@@ -144,7 +144,7 @@
 			"inputs": [
 				{
 					"id": "rStuK78RlBErnRS6",
-					"source_id": "8ba81807-66c5-4de6-9593-0e5540074f46",
+					"source_id": "a2286e5a-ed3e-4aa8-8e2a-23ac79ccc605",
 					"type": "dataset",
 					"name": "vr_foraging_raw",
 					"source_path": "vr_foraging_raw/",
@@ -160,7 +160,7 @@
 				}
 			],
 			"results": {
-				"id": "d51df783-d892-4304-a129-238a9baea72a"
+				"id": "278c12cc-fb64-4399-88cf-8bc3e6db6dc2"
 			}
 		}
 	]
