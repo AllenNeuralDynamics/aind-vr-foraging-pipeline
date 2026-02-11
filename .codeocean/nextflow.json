@@ -7,7 +7,7 @@
 				"id": "7486e654-3418-4050-ab38-11ff637bec9b",
 				"name": "primary-qc-vr-foraging",
 				"slug": "1600699",
-				"version": 5
+				"version": 6
 			},
 			"resources": {
 				"cpus": 1,
@@ -16,7 +16,7 @@
 			"inputs": [
 				{
 					"id": "i4zktfhrA4bbmoBS",
-					"source_id": "a2286e5a-ed3e-4aa8-8e2a-23ac79ccc605",
+					"source_id": "c16d7200-cd40-4ec8-aaff-92f753b14ad6",
 					"type": "dataset",
 					"name": "vr_foraging_raw",
 					"source_path": "vr_foraging_raw/",
@@ -25,9 +25,7 @@
 				}
 			],
 			"results": {
-				"id": "7486e654-3418-4050-ab38-11ff637bec9b",
-				"source_path": "raw_qc/*.png",
-				"target_path": "raw_qc"
+				"id": "7486e654-3418-4050-ab38-11ff637bec9b"
 			}
 		},
 		{
@@ -36,7 +34,7 @@
 				"id": "37fe4bfc-5044-44cc-9270-0274a49050fe",
 				"name": "primary-nwb-packaging-vr-foraging",
 				"slug": "7841426",
-				"version": 5
+				"version": 6
 			},
 			"resources": {
 				"cpus": 1,
@@ -45,87 +43,17 @@
 			"inputs": [
 				{
 					"id": "ElrzrhySDvMA4K29",
-					"source_id": "a2286e5a-ed3e-4aa8-8e2a-23ac79ccc605",
+					"source_id": "c16d7200-cd40-4ec8-aaff-92f753b14ad6",
 					"type": "dataset",
 					"name": "vr_foraging_raw",
 					"source_path": "vr_foraging_raw/",
 					"target_path": "vr_foraging_raw",
 					"collect": true
 				}
-			]
-		},
-		{
-			"name": "capsule_processing_nwb_packaging_vr_foraging_4",
-			"capsule": {
-				"id": "615eb7a0-d882-4705-a5c8-f267c18d3747",
-				"name": "processing-nwb-packaging-vr-foraging",
-				"slug": "3664899",
-				"version": 3
-			},
-			"resources": {
-				"cpus": 4,
-				"memory": 32
-			},
-			"inputs": [
-				{
-					"id": "asbwtZb6JpKY9J8q",
-					"source_id": "data/hardware_mapping",
-					"type": "pipeline",
-					"name": "hardware_mapping",
-					"source_path": "hardware_mapping/"
-				},
-				{
-					"id": "olxuFMuucrnWL3BR",
-					"source_id": "data/hed_tag_mapping",
-					"type": "pipeline",
-					"name": "hed_tag_mapping",
-					"source_path": "hed_tag_mapping/"
-				},
-				{
-					"id": "SqCbHFCW6XYORuI9",
-					"source_id": "capsule_primary_nwb_packaging_vr_foraging_2",
-					"type": "capsule",
-					"name": "primary-nwb-packaging-vr-foraging",
-					"target_path": "vr_foraging_raw_nwb",
-					"collect": true
-				}
 			],
 			"results": {
-				"id": "615eb7a0-d882-4705-a5c8-f267c18d3747"
-			}
-		},
-		{
-			"name": "capsule_processing_qc_vr_foraging_5",
-			"capsule": {
-				"id": "7e1328ac-d888-46db-a433-09489299a35b",
-				"name": "processing-qc-vr-foraging",
-				"slug": "0042488",
-				"version": 3
-			},
-			"resources": {
-				"cpus": 1,
-				"memory": 8
-			},
-			"inputs": [
-				{
-					"id": "TaH3UCdu3eHgnR2a",
-					"source_id": "capsule_primary_qc_vr_foraging_1",
-					"type": "capsule",
-					"name": "primary-qc-vr-foraging",
-					"source_path": "quality_control.json",
-					"target_path": "raw_qc.json"
-				},
-				{
-					"id": "Hrew8FEIw70qJcC1",
-					"source_id": "capsule_processing_nwb_packaging_vr_foraging_4",
-					"type": "capsule",
-					"name": "processing-nwb-packaging-vr-foraging",
-					"target_path": "vr_foraging_processed_nwb",
-					"collect": true
-				}
-			],
-			"results": {
-				"id": "7e1328ac-d888-46db-a433-09489299a35b"
+				"id": "51b7989c-8f37-4546-b936-a15e48ea8425",
+				"source_path": "*.nwb.zarr"
 			}
 		},
 		{
@@ -143,19 +71,19 @@
 			},
 			"inputs": [
 				{
-					"id": "rStuK78RlBErnRS6",
-					"source_id": "a2286e5a-ed3e-4aa8-8e2a-23ac79ccc605",
-					"type": "dataset",
-					"name": "vr_foraging_raw",
-					"source_path": "vr_foraging_raw/",
+					"id": "nRI56kvAWxKDJsDU",
+					"source_id": "capsule_primary_nwb_packaging_vr_foraging_2",
+					"type": "capsule",
+					"name": "primary-nwb-packaging-vr-foraging",
+					"source_path": "*.json",
 					"collect": true
 				},
 				{
-					"id": "ZN6YNgNQixGrS6oi",
-					"source_id": "capsule_processing_nwb_packaging_vr_foraging_4",
-					"type": "capsule",
-					"name": "processing-nwb-packaging-vr-foraging",
-					"source_path": "*.json",
+					"id": "rStuK78RlBErnRS6",
+					"source_id": "c16d7200-cd40-4ec8-aaff-92f753b14ad6",
+					"type": "dataset",
+					"name": "vr_foraging_raw",
+					"source_path": "vr_foraging_raw/",
 					"collect": true
 				}
 			],
