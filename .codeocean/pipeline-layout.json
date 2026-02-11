@@ -6,44 +6,14 @@
 			"target": "capsule_primary_nwb_packaging_vr_foraging_2"
 		},
 		{
-			"id": "xy-edge__capsule_primary_nwb_packaging_vr_foraging_2-capsule_processing_nwb_packaging_vr_foraging_4",
-			"source": "capsule_primary_nwb_packaging_vr_foraging_2",
-			"target": "capsule_processing_nwb_packaging_vr_foraging_4"
-		},
-		{
 			"id": "xy-edge__a2286e5a-ed3e-4aa8-8e2a-23ac79ccc605-capsule_primary_qc_vr_foraging_1",
 			"source": "a2286e5a-ed3e-4aa8-8e2a-23ac79ccc605",
 			"target": "capsule_primary_qc_vr_foraging_1"
 		},
 		{
-			"id": "xy-edge__capsule_processing_nwb_packaging_vr_foraging_4-capsule_processing_qc_vr_foraging_5",
-			"source": "capsule_processing_nwb_packaging_vr_foraging_4",
-			"target": "capsule_processing_qc_vr_foraging_5"
-		},
-		{
-			"id": "xy-edge__capsule_processing_qc_vr_foraging_5-results",
-			"source": "capsule_processing_qc_vr_foraging_5",
-			"target": "results"
-		},
-		{
 			"id": "xy-edge__capsule_primary_qc_vr_foraging_1-results",
 			"source": "capsule_primary_qc_vr_foraging_1",
 			"target": "results"
-		},
-		{
-			"id": "xy-edge__capsule_processing_nwb_packaging_vr_foraging_4-results",
-			"source": "capsule_processing_nwb_packaging_vr_foraging_4",
-			"target": "results"
-		},
-		{
-			"id": "xy-edge__capsule_primary_qc_vr_foraging_1-capsule_processing_qc_vr_foraging_5",
-			"source": "capsule_primary_qc_vr_foraging_1",
-			"target": "capsule_processing_qc_vr_foraging_5"
-		},
-		{
-			"id": "xy-edge__capsule_processing_nwb_packaging_vr_foraging_4-capsule_aind_pipeline_processing_metadata_aggregator_20_6",
-			"source": "capsule_processing_nwb_packaging_vr_foraging_4",
-			"target": "capsule_aind_pipeline_processing_metadata_aggregator_20_6"
 		},
 		{
 			"id": "xy-edge__a2286e5a-ed3e-4aa8-8e2a-23ac79ccc605-capsule_aind_pipeline_processing_metadata_aggregator_20_6",
@@ -56,14 +26,16 @@
 			"target": "results"
 		},
 		{
-			"id": "xy-edge__data/hardware_mapping-capsule_processing_nwb_packaging_vr_foraging_4",
-			"source": "data/hardware_mapping",
-			"target": "capsule_processing_nwb_packaging_vr_foraging_4"
+			"id": "xy-edge__capsule_primary_nwb_packaging_vr_foraging_2-capsule_aind_pipeline_processing_metadata_aggregator_20_6",
+			"selected": false,
+			"source": "capsule_primary_nwb_packaging_vr_foraging_2",
+			"target": "capsule_aind_pipeline_processing_metadata_aggregator_20_6"
 		},
 		{
-			"id": "xy-edge__data/hed_tag_mapping-capsule_processing_nwb_packaging_vr_foraging_4",
-			"source": "data/hed_tag_mapping",
-			"target": "capsule_processing_nwb_packaging_vr_foraging_4"
+			"id": "xy-edge__capsule_primary_nwb_packaging_vr_foraging_2-results",
+			"selected": false,
+			"source": "capsule_primary_nwb_packaging_vr_foraging_2",
+			"target": "results"
 		}
 	],
 	"nodes": [
@@ -77,33 +49,15 @@
 			"type": "results"
 		},
 		{
-			"id": "data/hardware_mapping",
-			"position": {
-				"x": -134.33333333333337,
-				"y": 153.33333333333334
-			},
-			"selected": false,
-			"type": "pipeline"
-		},
-		{
-			"id": "data/hed_tag_mapping",
-			"position": {
-				"x": 193.66666666666669,
-				"y": 160.66666666666669
-			},
-			"selected": false,
-			"type": "pipeline"
-		},
-		{
 			"data": {
-				"capsule_id": "37fe4bfc-5044-44cc-9270-0274a49050fe"
+				"capsule_id": "51b7989c-8f37-4546-b936-a15e48ea8425"
 			},
 			"id": "capsule_primary_nwb_packaging_vr_foraging_2",
 			"position": {
-				"x": 429.3448428080104,
-				"y": 320.3161606650441
+				"x": 365.92289063710246,
+				"y": 488.8850335403524
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -112,32 +66,8 @@
 			},
 			"id": "capsule_primary_qc_vr_foraging_1",
 			"position": {
-				"x": 725.5157340152901,
-				"y": 546.3512333305845
-			},
-			"selected": true,
-			"type": "capsule"
-		},
-		{
-			"data": {
-				"capsule_id": "615eb7a0-d882-4705-a5c8-f267c18d3747"
-			},
-			"id": "capsule_processing_nwb_packaging_vr_foraging_4",
-			"position": {
-				"x": 71.0910735179348,
-				"y": 643.4972228590487
-			},
-			"selected": true,
-			"type": "capsule"
-		},
-		{
-			"data": {
-				"capsule_id": "7e1328ac-d888-46db-a433-09489299a35b"
-			},
-			"id": "capsule_processing_qc_vr_foraging_5",
-			"position": {
-				"x": 449.4173666809213,
-				"y": 1005.1274278102203
+				"x": 715.5017415672521,
+				"y": 621.4561766908703
 			},
 			"selected": true,
 			"type": "capsule"
@@ -156,12 +86,17 @@
 			},
 			"id": "capsule_aind_pipeline_processing_metadata_aggregator_20_6",
 			"position": {
-				"x": 968.5595493631013,
-				"y": 968.0389216719627
+				"x": 905.1375971921932,
+				"y": 1136.6077945472712
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1763749236298
+	"timestamp": 1770770013722,
+	"viewport": {
+		"x": 316.7332347077921,
+		"y": 203.08499725460445,
+		"zoom": 0.5991616262078848
+	}
 }
