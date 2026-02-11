@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:f06dc4e3f19a6e91dd83b92e2127eb640547405a16ee1823c4e9a0f17ff4c31f
+// hash:sha256:777721330a2f9eee85368c9823b37022e3f476114ffffc9dba37be34ebb917c1
 
 // capsule - primary-nwb-packaging-vr-foraging
 process capsule_primary_nwb_packaging_vr_foraging_2 {
@@ -147,7 +147,7 @@ process capsule_aind_pipeline_processing_metadata_aggregator_20_6 {
 	"""
 }
 
-params.vr_foraging_raw_url = 's3://aind-private-data-prod-o5171v/behavior_794591_2025-10-06_19-07-16'
+params.vr_foraging_raw_url = 's3://aind-open-data/804430_2025-10-30_23-15-07'
 
 workflow {
 	// input data
