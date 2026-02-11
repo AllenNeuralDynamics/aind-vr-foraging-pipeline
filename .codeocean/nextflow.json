@@ -25,9 +25,7 @@
 				}
 			],
 			"results": {
-				"id": "7486e654-3418-4050-ab38-11ff637bec9b",
-				"source_path": "raw_qc/*.png",
-				"target_path": "raw_qc"
+				"id": "7486e654-3418-4050-ab38-11ff637bec9b"
 			}
 		},
 		{

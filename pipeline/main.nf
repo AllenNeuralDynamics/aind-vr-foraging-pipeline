@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-// hash:sha256:78b72a34ec25980b1d80c7f5257a2df63289cccaa1bfc62ff76fe701b02f6b78
+// hash:sha256:f06dc4e3f19a6e91dd83b92e2127eb640547405a16ee1823c4e9a0f17ff4c31f
 
 // capsule - primary-nwb-packaging-vr-foraging
 process capsule_primary_nwb_packaging_vr_foraging_2 {
@@ -58,13 +58,13 @@ process capsule_primary_qc_vr_foraging_1 {
 	cpus 1
 	memory '7.5 GB'
 
-	publishDir "$RESULTS_PATH/raw_qc", saveAs: { filename -> filename.matches("capsule/results/raw_qc/.*\\.png") ? new File(filename).getName() : null }
+	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
 
 	input:
 	path 'capsule/data/vr_foraging_raw'
 
 	output:
-	path 'capsule/results/raw_qc/*.png'
+	path 'capsule/results/*'
 
 	script:
 	"""
