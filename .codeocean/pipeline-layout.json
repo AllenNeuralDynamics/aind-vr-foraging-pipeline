@@ -50,14 +50,14 @@
 		},
 		{
 			"data": {
-				"capsule_id": "51b7989c-8f37-4546-b936-a15e48ea8425"
+				"capsule_id": "37fe4bfc-5044-44cc-9270-0274a49050fe"
 			},
 			"id": "capsule_primary_nwb_packaging_vr_foraging_2",
 			"position": {
 				"x": 365.92289063710246,
 				"y": 488.8850335403524
 			},
-			"selected": false,
+			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -69,7 +69,7 @@
 				"x": 715.5017415672521,
 				"y": 621.4561766908703
 			},
-			"selected": true,
+			"selected": false,
 			"type": "capsule"
 		},
 		{
@@ -93,10 +93,10 @@
 			"type": "capsule"
 		}
 	],
-	"timestamp": 1770770013722,
+	"timestamp": 1770772239878,
 	"viewport": {
-		"x": 316.7332347077921,
-		"y": 203.08499725460445,
-		"zoom": 0.5991616262078848
+		"x": 466.0860923638721,
+		"y": 63.86460466554934,
+		"zoom": 0.6251704153188617
 	}
 }

@@ -33,9 +33,10 @@
 		{
 			"name": "capsule_primary_nwb_packaging_vr_foraging_2",
 			"capsule": {
-				"id": "51b7989c-8f37-4546-b936-a15e48ea8425",
+				"id": "37fe4bfc-5044-44cc-9270-0274a49050fe",
 				"name": "primary-nwb-packaging-vr-foraging",
-				"slug": "3265591"
+				"slug": "7841426",
+				"version": 6
 			},
 			"resources": {
 				"cpus": 1,
