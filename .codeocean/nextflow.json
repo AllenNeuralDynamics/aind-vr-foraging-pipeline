@@ -34,7 +34,7 @@
 				"id": "37fe4bfc-5044-44cc-9270-0274a49050fe",
 				"name": "primary-nwb-packaging-vr-foraging",
 				"slug": "7841426",
-				"version": 6
+				"version": 7
 			},
 			"resources": {
 				"cpus": 1,
