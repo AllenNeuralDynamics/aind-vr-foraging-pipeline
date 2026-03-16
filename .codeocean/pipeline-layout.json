@@ -6,21 +6,6 @@
 			"target": "capsule_primary_nwb_packaging_vr_foraging_2"
 		},
 		{
-			"id": "xy-edge__c16d7200-cd40-4ec8-aaff-92f753b14ad6-capsule_primary_qc_vr_foraging_1",
-			"source": "c16d7200-cd40-4ec8-aaff-92f753b14ad6",
-			"target": "capsule_primary_qc_vr_foraging_1"
-		},
-		{
-			"id": "xy-edge__capsule_primary_qc_vr_foraging_1-results",
-			"source": "capsule_primary_qc_vr_foraging_1",
-			"target": "results"
-		},
-		{
-			"id": "xy-edge__c16d7200-cd40-4ec8-aaff-92f753b14ad6-capsule_aind_pipeline_processing_metadata_aggregator_20_6",
-			"source": "c16d7200-cd40-4ec8-aaff-92f753b14ad6",
-			"target": "capsule_aind_pipeline_processing_metadata_aggregator_20_6"
-		},
-		{
 			"id": "xy-edge__capsule_aind_pipeline_processing_metadata_aggregator_20_6-results",
 			"source": "capsule_aind_pipeline_processing_metadata_aggregator_20_6",
 			"target": "results"
@@ -50,7 +35,7 @@
 		},
 		{
 			"data": {
-				"capsule_id": "37fe4bfc-5044-44cc-9270-0274a49050fe"
+				"capsule_id": "51b7989c-8f37-4546-b936-a15e48ea8425"
 			},
 			"id": "capsule_primary_nwb_packaging_vr_foraging_2",
 			"position": {
@@ -58,18 +43,6 @@
 				"y": 488.8850335403524
 			},
 			"selected": false,
-			"type": "capsule"
-		},
-		{
-			"data": {
-				"capsule_id": "7486e654-3418-4050-ab38-11ff637bec9b"
-			},
-			"id": "capsule_primary_qc_vr_foraging_1",
-			"position": {
-				"x": 715.5017415672521,
-				"y": 621.4561766908703
-			},
-			"selected": true,
 			"type": "capsule"
 		},
 		{
@@ -93,9 +66,9 @@
 			"type": "dataset"
 		}
 	],
-	"timestamp": 1770774102055,
+	"timestamp": 1773697594613,
 	"viewport": {
-		"x": 466.0860923638721,
+		"x": 458.0860923638721,
 		"y": 63.86460466554934,
 		"zoom": 0.6251704153188617
 	}

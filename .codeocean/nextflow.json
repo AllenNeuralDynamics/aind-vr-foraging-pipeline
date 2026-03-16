@@ -2,39 +2,13 @@
 	"version": 2,
 	"processes": [
 		{
-			"name": "capsule_primary_qc_vr_foraging_1",
-			"capsule": {
-				"id": "7486e654-3418-4050-ab38-11ff637bec9b",
-				"name": "primary-qc-vr-foraging",
-				"slug": "1600699",
-				"version": 9
-			},
-			"resources": {
-				"cpus": 1,
-				"memory": 8
-			},
-			"inputs": [
-				{
-					"id": "i4zktfhrA4bbmoBS",
-					"source_id": "c16d7200-cd40-4ec8-aaff-92f753b14ad6",
-					"type": "dataset",
-					"name": "vr_foraging_raw",
-					"source_path": "vr_foraging_raw/",
-					"target_path": "vr_foraging_raw",
-					"collect": true
-				}
-			],
-			"results": {
-				"id": "7486e654-3418-4050-ab38-11ff637bec9b"
-			}
-		},
-		{
 			"name": "capsule_primary_nwb_packaging_vr_foraging_2",
 			"capsule": {
-				"id": "37fe4bfc-5044-44cc-9270-0274a49050fe",
+				"id": "51b7989c-8f37-4546-b936-a15e48ea8425",
 				"name": "primary-nwb-packaging-vr-foraging",
-				"slug": "7841426",
-				"version": 9
+				"slug": "3265591",
+				"commit": "884dcddd7e5037ab214fafc105312cfa41bc65f8",
+				"image_tag": "958866e7dd69a688433614f9267ae877"
 			},
 			"resources": {
 				"cpus": 1,
@@ -76,14 +50,6 @@
 					"type": "capsule",
 					"name": "primary-nwb-packaging-vr-foraging",
 					"source_path": "*.json",
-					"collect": true
-				},
-				{
-					"id": "rStuK78RlBErnRS6",
-					"source_id": "c16d7200-cd40-4ec8-aaff-92f753b14ad6",
-					"type": "dataset",
-					"name": "vr_foraging_raw",
-					"source_path": "vr_foraging_raw/",
 					"collect": true
 				}
 			],
