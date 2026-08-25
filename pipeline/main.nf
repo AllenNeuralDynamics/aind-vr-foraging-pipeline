@@ -1,22 +1,22 @@
 #!/usr/bin/env nextflow
-// hash:sha256:164030b6c988fd08fbb442961b1f4fa9afeb0e99fdcc43f5bda98370c08fe6f1
+// hash:sha256:cbf61401bb6fe84e6d20e3ee97c660256957329942b86c729646bb9d92a1606f
 
 // capsule - primary-nwb-packaging-vr-foraging
 process capsule_primary_nwb_packaging_vr_foraging_2 {
 	tag 'capsule-7841426'
-	container "$REGISTRY_HOST/published/37fe4bfc-5044-44cc-9270-0274a49050fe:v9"
+	container "$REGISTRY_HOST/published/37fe4bfc-5044-44cc-9270-0274a49050fe:v10"
 
 	cpus 1
 	memory '7.5 GB'
 
-	publishDir "$RESULTS_PATH", saveAs: { filename -> filename.matches("capsule/results/.*\\.nwb\\.zarr") ? new File(filename).getName() : null }
+	publishDir "$RESULTS_PATH", mode: 'copy', saveAs: { filename -> new File(filename).getName() }
 
 	input:
 	path 'capsule/data/vr_foraging_raw'
 
 	output:
-	path 'capsule/results/*.nwb.zarr'
-	path 'capsule/results/*.json', emit: to_capsule_aind_pipeline_processing_metadata_aggregator_20_6_3
+	path 'capsule/results/*'
+	path 'capsule/results/*.json', emit: to_capsule_aind_metadata_manager_capsule_6_3
 
 	script:
 	"""
@@ -34,9 +34,9 @@ process capsule_primary_nwb_packaging_vr_foraging_2 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 --branch v9.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-7841426.git" capsule-repo
+		git -c credential.helper= clone --filter=tree:0 --branch v10.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-7841426.git" capsule-repo
 	else
-		git -c credential.helper= clone --branch v9.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-7841426.git" capsule-repo
+		git -c credential.helper= clone --branch v10.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-7841426.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
@@ -53,12 +53,12 @@ process capsule_primary_nwb_packaging_vr_foraging_2 {
 // capsule - primary-qc-vr-foraging
 process capsule_primary_qc_vr_foraging_1 {
 	tag 'capsule-1600699'
-	container "$REGISTRY_HOST/published/7486e654-3418-4050-ab38-11ff637bec9b:v9"
+	container "$REGISTRY_HOST/published/7486e654-3418-4050-ab38-11ff637bec9b:v10"
 
 	cpus 1
 	memory '7.5 GB'
 
-	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
+	publishDir "$RESULTS_PATH", mode: 'copy', saveAs: { filename -> new File(filename).getName() }
 
 	input:
 	path 'capsule/data/vr_foraging_raw'
@@ -82,9 +82,9 @@ process capsule_primary_qc_vr_foraging_1 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 --branch v9.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1600699.git" capsule-repo
+		git -c credential.helper= clone --filter=tree:0 --branch v10.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1600699.git" capsule-repo
 	else
-		git -c credential.helper= clone --branch v9.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1600699.git" capsule-repo
+		git -c credential.helper= clone --branch v10.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-1600699.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
@@ -98,15 +98,15 @@ process capsule_primary_qc_vr_foraging_1 {
 	"""
 }
 
-// capsule - aind-pipeline-processing-metadata-aggregator_2.0
-process capsule_aind_pipeline_processing_metadata_aggregator_20_6 {
-	tag 'capsule-8464459'
-	container "$REGISTRY_HOST/published/278c12cc-fb64-4399-88cf-8bc3e6db6dc2:v1"
+// capsule - aind-metadata-manager-capsule
+process capsule_aind_metadata_manager_capsule_6 {
+	tag 'capsule-8324994'
+	container "$REGISTRY_HOST/published/22261566-0b4f-42aa-bcaa-58efa55bf653:v4"
 
 	cpus 1
 	memory '7.5 GB'
 
-	publishDir "$RESULTS_PATH", saveAs: { filename -> new File(filename).getName() }
+	publishDir "$RESULTS_PATH", mode: 'copy', saveAs: { filename -> new File(filename).getName() }
 
 	input:
 	path 'capsule/data/'
@@ -120,7 +120,7 @@ process capsule_aind_pipeline_processing_metadata_aggregator_20_6 {
 	#!/usr/bin/env bash
 	set -e
 
-	export CO_CAPSULE_ID=278c12cc-fb64-4399-88cf-8bc3e6db6dc2
+	export CO_CAPSULE_ID=22261566-0b4f-42aa-bcaa-58efa55bf653
 	export CO_CPUS=1
 	export CO_MEMORY=8053063680
 
@@ -131,9 +131,9 @@ process capsule_aind_pipeline_processing_metadata_aggregator_20_6 {
 
 	echo "[${task.tag}] cloning git repo..."
 	if [[ "\$(printf '%s\n' "2.20.0" "\$(git version | awk '{print \$3}')" | sort -V | head -n1)" = "2.20.0" ]]; then
-		git -c credential.helper= clone --filter=tree:0 --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8464459.git" capsule-repo
+		git -c credential.helper= clone --filter=tree:0 --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8324994.git" capsule-repo
 	else
-		git -c credential.helper= clone --branch v1.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8464459.git" capsule-repo
+		git -c credential.helper= clone --branch v4.0 "https://\$GIT_ACCESS_TOKEN@\$GIT_HOST/capsule-8324994.git" capsule-repo
 	fi
 	mv capsule-repo/code capsule/code && ln -s \$PWD/capsule/code /code
 	rm -rf capsule-repo
@@ -141,22 +141,22 @@ process capsule_aind_pipeline_processing_metadata_aggregator_20_6 {
 	echo "[${task.tag}] running capsule..."
 	cd capsule/code
 	chmod +x run
-	./run ${params.capsule_aind_pipeline_processing_metadata_aggregator_20_6_args}
+	./run ${params.capsule_aind_metadata_manager_capsule_6_args}
 
 	echo "[${task.tag}] completed!"
 	"""
 }
 
-params.vr_foraging_raw_url = 's3://aind-open-data/804430_2025-10-30_23-15-07'
+params.vr_foraging_raw_url = 's3://aind-open-data/863680_2026-08-22_17-46-40'
 
 workflow {
 	// input data
 	vr_foraging_raw_to_primary_qc_vr_foraging_1 = Channel.fromPath(params.vr_foraging_raw_url + "/", type: 'any')
 	vr_foraging_raw_to_primary_nwb_packaging_vr_foraging_2 = Channel.fromPath(params.vr_foraging_raw_url + "/", type: 'any')
-	vr_foraging_raw_to_aind_pipeline_processing_metadata_aggregator_2_0_4 = Channel.fromPath(params.vr_foraging_raw_url + "/", type: 'any')
+	vr_foraging_raw_to_aind_metadata_manager_capsule_4 = Channel.fromPath(params.vr_foraging_raw_url + "/", type: 'any')
 
 	// run processes
 	capsule_primary_nwb_packaging_vr_foraging_2(vr_foraging_raw_to_primary_nwb_packaging_vr_foraging_2.collect())
 	capsule_primary_qc_vr_foraging_1(vr_foraging_raw_to_primary_qc_vr_foraging_1.collect())
-	capsule_aind_pipeline_processing_metadata_aggregator_20_6(capsule_primary_nwb_packaging_vr_foraging_2.out.to_capsule_aind_pipeline_processing_metadata_aggregator_20_6_3.collect(), vr_foraging_raw_to_aind_pipeline_processing_metadata_aggregator_2_0_4.collect())
+	capsule_aind_metadata_manager_capsule_6(capsule_primary_nwb_packaging_vr_foraging_2.out.to_capsule_aind_metadata_manager_capsule_6_3.collect(), vr_foraging_raw_to_aind_metadata_manager_capsule_4.collect())
 }

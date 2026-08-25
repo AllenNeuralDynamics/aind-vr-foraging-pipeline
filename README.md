@@ -21,7 +21,7 @@ The input to the pipeline is data structured in the following format. At the top
 The json files follow the metadata schema defined [here](https://github.com/AllenNeuralDynamics/aind-data-schema). The relevant folder to look at for this pipeline is the **`behavior`** folder. This pipeline ONLY processes data from it
 
 ### Pipeline Steps
-There are currently 5 steps in the pipeline, some of which run simultaneously. They are listed below:
+There are currently 3 steps in the pipeline, some of which run simultaneously. They are listed below:
 
 * [Primary Data NWB Packaging](https://github.com/AllenNeuralDynamics/aind-vr-foraging-primary-data-nwb-packaging): This steps uses this [library](https://github.com/AllenNeuralDynamics/Aind.Behavior.VrForaging.Packaging) and is just a thin wrapper over it. All issues should be opened on the library and then this capsule will just update the version and any minor updates as needed.
 * [Primary Data QC](https://github.com/AllenNeuralDynamics/aind-vr-foraging-primary-qc): This steps ingets the input data with the data contract and outputs qc images, metrics, on hardware signals. The output here are figures, and a **`quality_control.json`** that follows the metadata schema linked above.
