@@ -7,7 +7,7 @@
 				"id": "7486e654-3418-4050-ab38-11ff637bec9b",
 				"name": "primary-qc-vr-foraging",
 				"slug": "1600699",
-				"version": 9
+				"version": 10
 			},
 			"resources": {
 				"cpus": 1,
@@ -16,7 +16,7 @@
 			"inputs": [
 				{
 					"id": "i4zktfhrA4bbmoBS",
-					"source_id": "c16d7200-cd40-4ec8-aaff-92f753b14ad6",
+					"source_id": "f1dbbe3a-2809-4719-95b7-1250980c371a",
 					"type": "dataset",
 					"name": "vr_foraging_raw",
 					"source_path": "vr_foraging_raw/",
@@ -34,7 +34,7 @@
 				"id": "37fe4bfc-5044-44cc-9270-0274a49050fe",
 				"name": "primary-nwb-packaging-vr-foraging",
 				"slug": "7841426",
-				"version": 9
+				"version": 10
 			},
 			"resources": {
 				"cpus": 1,
@@ -43,7 +43,7 @@
 			"inputs": [
 				{
 					"id": "ElrzrhySDvMA4K29",
-					"source_id": "c16d7200-cd40-4ec8-aaff-92f753b14ad6",
+					"source_id": "f1dbbe3a-2809-4719-95b7-1250980c371a",
 					"type": "dataset",
 					"name": "vr_foraging_raw",
 					"source_path": "vr_foraging_raw/",
@@ -52,17 +52,16 @@
 				}
 			],
 			"results": {
-				"id": "51b7989c-8f37-4546-b936-a15e48ea8425",
-				"source_path": "*.nwb.zarr"
+				"id": "37fe4bfc-5044-44cc-9270-0274a49050fe"
 			}
 		},
 		{
-			"name": "capsule_aind_pipeline_processing_metadata_aggregator_20_6",
+			"name": "capsule_aind_metadata_manager_capsule_6",
 			"capsule": {
-				"id": "278c12cc-fb64-4399-88cf-8bc3e6db6dc2",
-				"name": "aind-pipeline-processing-metadata-aggregator_2.0",
-				"slug": "8464459",
-				"version": 1,
+				"id": "22261566-0b4f-42aa-bcaa-58efa55bf653",
+				"name": "aind-metadata-manager-capsule",
+				"slug": "8324994",
+				"version": 4,
 				"app_panel": true
 			},
 			"resources": {
@@ -80,7 +79,7 @@
 				},
 				{
 					"id": "rStuK78RlBErnRS6",
-					"source_id": "c16d7200-cd40-4ec8-aaff-92f753b14ad6",
+					"source_id": "f1dbbe3a-2809-4719-95b7-1250980c371a",
 					"type": "dataset",
 					"name": "vr_foraging_raw",
 					"source_path": "vr_foraging_raw/",
@@ -88,7 +87,7 @@
 				}
 			],
 			"results": {
-				"id": "278c12cc-fb64-4399-88cf-8bc3e6db6dc2"
+				"id": "22261566-0b4f-42aa-bcaa-58efa55bf653"
 			}
 		}
 	]
