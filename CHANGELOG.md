@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline/compare/v0.2.0...v0.3.0) (2026-08-26)
+
+
+### Features
+
+* use latest released versions ([#13](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline/issues/13)) ([722e2d9](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline/commit/722e2d9a64b26d49da537e478299d4ff822a86f8))
+
+
+
 # [0.2.0](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline/compare/v0.1.0...v0.2.0) (2026-08-25)
 
 
