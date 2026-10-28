@@ -1,3 +1,12 @@
+# [0.12.0](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline/compare/v0.11.0...v0.12.0) (2026-10-28)
+
+
+### Features
+
+* use latest released qc capsule ([#33](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline/issues/33)) ([43a7bce](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline/commit/43a7bce97a7a3ee02f7202b7cc7b9625b2607a11))
+
+
+
 # [0.11.0](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline/compare/v0.10.0...v0.11.0) (2026-10-16)
 
 
@@ -31,15 +40,6 @@
 ### Features
 
 * use latest released capsule ([#25](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline/issues/25)) ([6c58fbd](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline/commit/6c58fbd84390db44f2ee29e8dbd07d8af9e7f441))
-
-
-
-# [0.7.0](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline/compare/v0.6.0...v0.7.0) (2026-09-10)
-
-
-### Features
-
-* use latest released capsule version ([#23](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline/issues/23)) ([acc4192](https://github.com/AllenNeuralDynamics/aind-vr-foraging-pipeline/commit/acc41926be2a8b6a3807b0bbe16e1f40b4bd4060))
 
 
 
